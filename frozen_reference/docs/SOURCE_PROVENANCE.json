@@ -1,0 +1,37 @@
+{
+  "original_v1_commit": "6cd6c23d6af5e0b92a3840fe44e09655d8adaed0",
+  "original_file_sha256": {
+    ".gitignore": "0190f935d8bda141d2a1edea001df2789043f1edd6a3b4ba61988307bd5b4729",
+    "PUBLIC_EXCLUDE.md": "e1e8b3a14f1482f71f1dca4db694421d3a4e4513f9c4acef76a06a7b222479ea",
+    "README.md": "8bc9944c65b59f857f75ba224cdfcc2f9f5b64e2d4db7807a10901349edc0b34",
+    "repro/calib/calib_dl.py": "53b204799d39e77af690bafc849167f058076869a4cedcbc0947109c00455bc8",
+    "repro/cap_file_example.csv": "b07903fede8ce8b13b91d3887c552aa5675a1d3924e63a8fc72fffb5eed25249",
+    "repro/lib/adl_signals.py": "dcd0ef2c20e5ac92b310da44c0b88d08685f0c00acbb0021003e915dbc75ba6f",
+    "repro/lib/config.py": "ff1347b12dabc4235b15bab5634629caf6758f35c7dd015db0dcc871d1085920",
+    "repro/lib/engine.py": "bace2a66590f63c9c11fa80df1e5c4d3fa47800eb02d9a9a8286edeee9ab078d",
+    "repro/lib/engine_v12s.py": "d3882d257d75b60c162a40f8b83077f85209b76f0a39183b3c59372bc2278757",
+    "repro/lib/lib12s.py": "489b34de7fbcd80ce53de4111d27c47ed27f31053c21a32a7dd8feb03c997c38",
+    "repro/lib/r10_run.py": "809a27f134afc205aa8fab9bd44dffcc8ad24ec0caafaa823aaebca8bad51c06",
+    "repro/lib/r7_lib.py": "ba3481ea68ec7bb950956a4cbceb3962772e540b67c3bf2461bfbfc21f554035",
+    "repro/lib/r9_run.py": "0910d3b381acfb877bb40821a453fff4ac0fdcd8827759227fa5f235276e8d3a",
+    "repro/lib/rules.py": "b338a59123441d7dd403482a3e9f6dadd0882715b91b86c5f38508a3aa38ffe5",
+    "repro/lib/run_adapt.py": "188e8dd2ae0b471e9c8978ed7a17de94f9c28188e2425222f627392e9b742347",
+    "repro/lib/run_backtest.py": "f78d56cd860b22a7a7f43bb2fe8eee5af2022ddbf9efea4ccda2cc84aa041eb8",
+    "repro/lib/run_r7.py": "f6fe56639f1eba64635426b571a595b389275e8435605fa244d3079f61acc6e6",
+    "repro/lib/run_signals.py": "0b70c0e5487fc5dbd3793e2df3f890825a055022f69f0527eefceee21b346e2b",
+    "repro/lib/v10lib.py": "ade2a35006d77e2378720c6f28bd116842ccf50d734fa2a34bc167132f6aa102",
+    "repro/lib/v13lib.py": "731f3d829e92064de0611c6517e60ac016986605527e5fc5f1640078fd591a93",
+    "repro/run_headline.py": "746db3147b0fd0fbb1c899ba70d33d81054747248896a27a143cd4126982ad2e"
+  },
+  "original_file_count": 21,
+  "existing_v1_workspace_modified_by_this_research": false,
+  "extended_engine_origin": "Local v2 engine with explicit funding-event and account audit fixes; additional risk parameters are opt-in.",
+  "calibration_stream_origin": "Prior independent rebuild_calibration.py, streaming reducer and downloader retained; old rebuild-main omitted.",
+  "expanded_input_dependencies": "Old 315-cohort data and calibration are required local dependencies; not included in portable source archive.",
+  "research_profile_sha256": {
+    "candidate_balanced.json": "f6932fb17309bd22848f54e475390f641f3c03a45e9c2a2200b21c94fbc9bec7",
+    "candidate_diversified.json": "2eff7c4878a93fb73af8d8be295e4c69e34db7dfa05ce969b1e1a33b9305c121",
+    "candidate_lower_oi.json": "f47376992af58db2aae36be4fa2b9938759d89de903018b08164fca91ae7d3ca",
+    "reference.json": "75a3c64fc4570736a886d3ca04ea85ec27f8e6aa969648a5785ba34a574e3e42"
+  }
+}

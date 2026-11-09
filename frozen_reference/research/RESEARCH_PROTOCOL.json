@@ -1,0 +1,56 @@
+{
+  "registered_date": "2026-11-06",
+  "objective": "Evaluate a negative-funding strategy independently, rather than maximize the already-observed full-year return.",
+  "source_commit": "6cd6c23d6af5e0b92a3840fe44e09655d8adaed0",
+  "fixed_business_assumptions": {
+    "initial_B_capital_usdt": "10000000",
+    "annualization_denominator_usdt": "10000000",
+    "borrow_interest": "0",
+    "supplied_inventory_available_through_history": true,
+    "inventory_30pct_discount_already_applied": true,
+    "internal_transfers_permitted": true,
+    "no_live_orders_or_transfers": true
+  },
+  "candidate_reference": {
+    "strict_entry_r8_below": "-0.001",
+    "entry_basis_max": "-0.003",
+    "first_entry_T_minus_1h_wait": false,
+    "additions": "same predicate and original capacity controls",
+    "holding_capacity_trim": true,
+    "exit": "lock once raw market 24h settled-rate sum is positive",
+    "income_cost_multiple": "2",
+    "own_funding_k": "4",
+    "income_training_exit_confirmation_hours": 24,
+    "actual_exit_confirmation_hours": 1,
+    "training_execution_exit_mismatch_is_separate_model_experiment": true
+  },
+  "correction_bridge": [
+    "exact native 75.16414173387383 FY reference",
+    "extended engine matches native behavior with defaults",
+    "past-only volatility and explicit zero settlements",
+    "prior submission capacity plus raw current-hour fill cap",
+    "actual available unwind tail and separate account audit",
+    "new warmup, funding-interval and historical-universe data are labelled as a different input"
+  ],
+  "predeclared_strategy_axes": {
+    "entry_abs_r8": ["0.0005", "0.001", "0.002"],
+    "income_cost_multiple": ["1", "2", "3"],
+    "exit": ["raw_24h", "latest_settlement_nonnegative", "latest_settlement_positive", "raw_24h_confirm_6h"],
+    "sizing": ["original", "marginal_own_impact_limit", "OI_2p5pct", "OI_5pct", "single_coin_10pct"],
+    "ranking": ["original_rate_depth", "expected_net_per_roundtrip_cost"],
+    "income_model": ["original_24h_confirmation_training", "training_matches_1h_exit"]
+  },
+  "stress_only_not_return_optimization": {
+    "execution_cost_multiplier": ["1", "1.5", "2"],
+    "own_funding_k": ["2", "4", "6"],
+    "transfer_delay_hours": [1, 4, 8],
+    "deployment_fraction_of_10m": ["0.1", "0.25", "0.5", "1"]
+  },
+  "evaluation": {
+    "periods": "IS/HO/FY and chronological monthly or quarterly PnL",
+    "prior_holdout_already_seen": true,
+    "confidence": "weekly block resampling of common 8760-hour case differences, 2000 draws, fixed seed; exploratory and not a multiple-testing correction",
+    "selection": "No automatic FY winner promotion. Compare both time periods, cost stress, drawdown, capital usage, terminal obligations and account feasibility.",
+    "incomplete_unwind": "ann_completed_pct remains null; publish marked and realized components separately"
+  }
+}

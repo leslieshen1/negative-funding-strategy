@@ -1,0 +1,22 @@
+{
+  "schema_version": "nfb.opening-ledger.v1",
+  "source_mode": "synthetic",
+  "cash_usdt": {
+    "A": "0",
+    "B": "10000000"
+  },
+  "owned_token_A": {
+    "TEST": "1000"
+  },
+  "borrowed_token": {
+    "TEST": "1000"
+  },
+  "instruments": {
+    "1000TESTUSDT": {
+      "token": "TEST",
+      "spot_symbol": "TESTUSDT",
+      "perp_symbol": "1000TESTUSDT",
+      "tokens_per_perp_quantity": "1000"
+    }
+  }
+}

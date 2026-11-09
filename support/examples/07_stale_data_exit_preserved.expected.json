@@ -1,0 +1,57 @@
+{
+  "schema_version": "nfb.treasury-output.v1",
+  "request_id": "risk07",
+  "decision_id": "treasury-f6f5cae1503e8dcbaaba98d18e5d6966",
+  "as_of_ms": 1794182400000,
+  "valid_until_ms": 1794182390001,
+  "ledger_version": 1,
+  "research_only": true,
+  "submission_allowed": false,
+  "rc2_compatible_tightening_only": true,
+  "status": "PAUSE_NEW",
+  "allow_new_exposure": false,
+  "max_new_exposure_usdt": "0",
+  "reason_codes": [
+    "STALE_ACCOUNT_SNAPSHOT"
+  ],
+  "account_b": {
+    "local_collateral_equity_usdt": "9992000.000",
+    "conservative_equity_usdt": "9992000.000",
+    "one_x_gap_usdt": "0",
+    "transferable_settled_usdt": "500000",
+    "a_collateral_used_usdt": "0",
+    "pending_used_usdt": "0"
+  },
+  "account_a": {
+    "stressed_buyback_cash_usdt": "1100660.00000",
+    "buyback_buffer_gap_usdt": "0"
+  },
+  "instruments": [
+    {
+      "instrument_id": "1000TESTUSDT",
+      "exit_locked": true,
+      "strategy_buyback_qty_token": "1000000",
+      "provider_outstanding_qty_token": "1500000",
+      "provider_return_verified": false,
+      "buyback_stressed_usdt": "1100660.00000"
+    }
+  ],
+  "intents": [
+    {
+      "action": "LOCK_EXIT",
+      "instrument_id": "1000TESTUSDT",
+      "desired_pair_qty_token": "0",
+      "reason_codes": [
+        "EXISTING_EXIT_LOCK"
+      ]
+    },
+    {
+      "action": "KEEP_IDLE_COINS_UNENCUMBERED",
+      "instrument_id": "1000TESTUSDT",
+      "reason_codes": [
+        "LENDER_PERMISSION_NOT_CONFIRMED"
+      ]
+    }
+  ],
+  "execution_actions": []
+}

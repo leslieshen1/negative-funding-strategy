@@ -1,0 +1,517 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nfb:protocol:2.1.0:strategy-output.schema",
+  "title": "strategy-output",
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "const": "2.1.0"
+    },
+    "message_type": {
+      "const": "strategy_output"
+    },
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "valid_until_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ledger_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "mode": {
+      "enum": [
+        "shadow",
+        "paper",
+        "live"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "strategy_id": {
+          "const": "nfb.strategy.20261108.rc2"
+        },
+        "profile_sha256": {
+          "const": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5"
+        },
+        "engine_source_sha256": {
+          "const": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51"
+        }
+      },
+      "required": [
+        "strategy_id",
+        "profile_sha256",
+        "engine_source_sha256"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OK",
+        "HOLD",
+        "REJECT"
+      ]
+    },
+    "submission_allowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "instrument_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "episode_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "action": {
+            "enum": [
+              "ENTER",
+              "ADD",
+              "REDUCE",
+              "EXIT",
+              "HOLD",
+              "RECONCILE"
+            ]
+          },
+          "current_pair_qty_token": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "target_pair_qty_token": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "delta_pair_qty_token": {
+            "type": "string",
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "target_perp_qty_exchange": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "tokens_per_perp_quantity": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "exit_locked": {
+            "type": "boolean"
+          },
+          "max_slice_notional_usdt": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "reason_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "legs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "account": {
+                  "enum": [
+                    "A",
+                    "B"
+                  ]
+                },
+                "market": {
+                  "enum": [
+                    "spot",
+                    "perp"
+                  ]
+                },
+                "symbol": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "side": {
+                  "enum": [
+                    "BUY",
+                    "SELL"
+                  ]
+                },
+                "delta_quantity_exchange": {
+                  "type": "string",
+                  "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "quantity_unit": {
+                  "enum": [
+                    "raw_token",
+                    "perp_exchange_quantity"
+                  ]
+                },
+                "equivalent_raw_tokens": {
+                  "type": "string",
+                  "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "reduce_only": {
+                  "type": "boolean"
+                },
+                "limit_price_usdt_per_exchange_quantity": {
+                  "type": "string",
+                  "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                }
+              },
+              "required": [
+                "account",
+                "market",
+                "symbol",
+                "side",
+                "delta_quantity_exchange",
+                "quantity_unit",
+                "equivalent_raw_tokens",
+                "reduce_only",
+                "limit_price_usdt_per_exchange_quantity"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "model_diagnostics": {
+            "type": "object",
+            "properties": {
+              "model_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observed_at_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "expected_income_rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "round_trip_cost_rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "r7_gate_passed": {
+                "type": "boolean"
+              },
+              "adl_entry_blocked": {
+                "type": "boolean"
+              },
+              "calibration_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "calibration_is_observed": {
+                "type": "boolean"
+              },
+              "status": {
+                "enum": [
+                  "VALID",
+                  "UNAVAILABLE"
+                ]
+              },
+              "effective_entry_r8": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "income_training_outcomes_end_ms": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "income_sample_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "income_model_valid_from_ms": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "income_model_valid_until_ms": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "income_estimate_source": {
+                "enum": [
+                  "joint",
+                  "marginal_fallback",
+                  "unavailable"
+                ]
+              },
+              "funding_bucket": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "basis_bucket": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "sigma_24h": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "calibration_y": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "calibration_spread_multiplier": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "calibration_data_last_available_ms": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "calibration_age_hours": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "cost_reference_slice_notional_usdt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "model_bundle_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "runtime_replay": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "model_id",
+              "observed_at_ms",
+              "expected_income_rate",
+              "round_trip_cost_rate",
+              "r7_gate_passed",
+              "adl_entry_blocked",
+              "calibration_id",
+              "calibration_is_observed",
+              "status",
+              "effective_entry_r8",
+              "income_training_outcomes_end_ms",
+              "income_sample_count"
+            ],
+            "additionalProperties": false
+          },
+          "desired_pair_qty_token": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "risk_state": {
+            "enum": [
+              "NORMAL",
+              "PAUSE_NEW",
+              "EXIT_LOCKED",
+              "RECONCILE"
+            ]
+          },
+          "hedge_error_qty_token": {
+            "type": "string",
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          }
+        },
+        "required": [
+          "instrument_id",
+          "episode_id",
+          "action",
+          "current_pair_qty_token",
+          "target_pair_qty_token",
+          "delta_pair_qty_token",
+          "target_perp_qty_exchange",
+          "tokens_per_perp_quantity",
+          "exit_locked",
+          "max_slice_notional_usdt",
+          "reason_codes",
+          "legs",
+          "model_diagnostics",
+          "desired_pair_qty_token",
+          "risk_state"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "transfer_requests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "from_account": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "to_account": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "asset": {
+            "const": "USDT"
+          },
+          "amount": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "required_before_order_submission": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "request_id",
+          "from_account",
+          "to_account",
+          "asset",
+          "amount",
+          "required_before_order_submission"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "protocol_version",
+    "message_type",
+    "decision_id",
+    "input_request_id",
+    "as_of_ms",
+    "valid_until_ms",
+    "ledger_version",
+    "mode",
+    "model",
+    "status",
+    "submission_allowed",
+    "reason_codes",
+    "targets",
+    "transfer_requests"
+  ],
+  "additionalProperties": false
+}

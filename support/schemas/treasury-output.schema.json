@@ -1,0 +1,257 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "nfb.treasury-output.v1"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "valid_until_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ledger_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "research_only": {
+      "const": true
+    },
+    "submission_allowed": {
+      "const": false
+    },
+    "rc2_compatible_tightening_only": {
+      "const": true
+    },
+    "status": {
+      "enum": [
+        "PAUSE_NEW",
+        "ALLOW_WITHIN_RC2"
+      ]
+    },
+    "allow_new_exposure": {
+      "type": "boolean"
+    },
+    "max_new_exposure_usdt": {
+      "type": "string",
+      "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "account_b": {
+      "type": "object",
+      "properties": {
+        "local_collateral_equity_usdt": {
+          "type": "string",
+          "pattern": "-?(0|[1-9][0-9]*)(\\.[0-9]+)?"
+        },
+        "conservative_equity_usdt": {
+          "type": "string",
+          "pattern": "-?(0|[1-9][0-9]*)(\\.[0-9]+)?"
+        },
+        "one_x_gap_usdt": {
+          "type": "string",
+          "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+        },
+        "transferable_settled_usdt": {
+          "type": "string",
+          "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+        },
+        "a_collateral_used_usdt": {
+          "const": "0"
+        },
+        "pending_used_usdt": {
+          "const": "0"
+        }
+      },
+      "required": [
+        "local_collateral_equity_usdt",
+        "conservative_equity_usdt",
+        "one_x_gap_usdt",
+        "transferable_settled_usdt",
+        "a_collateral_used_usdt",
+        "pending_used_usdt"
+      ],
+      "additionalProperties": false
+    },
+    "account_a": {
+      "type": "object",
+      "properties": {
+        "stressed_buyback_cash_usdt": {
+          "type": "string",
+          "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+        },
+        "buyback_buffer_gap_usdt": {
+          "type": "string",
+          "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+        }
+      },
+      "required": [
+        "stressed_buyback_cash_usdt",
+        "buyback_buffer_gap_usdt"
+      ],
+      "additionalProperties": false
+    },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "instrument_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exit_locked": {
+            "type": "boolean"
+          },
+          "strategy_buyback_qty_token": {
+            "type": "string",
+            "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+          },
+          "provider_outstanding_qty_token": {
+            "type": "string",
+            "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+          },
+          "provider_return_verified": {
+            "type": "boolean"
+          },
+          "buyback_stressed_usdt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "-?(0|[1-9][0-9]*)(\\.[0-9]+)?"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "instrument_id",
+          "exit_locked",
+          "strategy_buyback_qty_token",
+          "provider_outstanding_qty_token",
+          "provider_return_verified",
+          "buyback_stressed_usdt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "intents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "action"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "enum": [
+              "RECONCILE_HEDGE",
+              "LOCK_EXIT",
+              "KEEP_IDLE_COINS_UNENCUMBERED",
+              "REQUEST_TRANSFER_WAIT_FOR_SETTLEMENT",
+              "WAIT_BUYBACK_CASH",
+              "REQUEST_MARGIN_REPAIR_WAIT",
+              "WAIT_REDEMPTION_SETTLEMENT",
+              "REDEEM_TO_CASH_WAIT_QUOTE_AND_SETTLEMENT"
+            ]
+          },
+          "instrument_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "gap_token": {
+            "type": "string",
+            "pattern": "-?(0|[1-9][0-9]*)(\\.[0-9]+)?"
+          },
+          "quantity_in_token": {
+            "type": "boolean"
+          },
+          "desired_pair_qty_token": {
+            "type": "string",
+            "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+          },
+          "reason_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "from_account": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "to_account": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "asset": {
+            "type": "string",
+            "minLength": 1
+          },
+          "amount": {
+            "type": "string",
+            "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+          },
+          "unfunded_after_intent_usdt": {
+            "type": "string",
+            "pattern": "(0|[1-9][0-9]*)(\\.[0-9]+)?"
+          }
+        }
+      }
+    },
+    "execution_actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "maxItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "decision_id",
+    "as_of_ms",
+    "valid_until_ms",
+    "ledger_version",
+    "research_only",
+    "submission_allowed",
+    "rc2_compatible_tightening_only",
+    "status",
+    "allow_new_exposure",
+    "max_new_exposure_usdt",
+    "reason_codes",
+    "account_b",
+    "account_a",
+    "instruments",
+    "intents",
+    "execution_actions"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nfb:treasury-output:v1"
+}

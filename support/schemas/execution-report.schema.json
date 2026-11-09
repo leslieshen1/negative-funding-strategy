@@ -1,0 +1,413 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nfb:protocol:2.1.0:execution-report.schema",
+  "title": "execution-report",
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "const": "2.1.0"
+    },
+    "message_type": {
+      "const": "execution_report"
+    },
+    "report_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ledger_version_before": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ledger_version_after": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "enum": [
+        "ACCEPTED",
+        "PARTIAL",
+        "FILLED",
+        "REJECTED",
+        "CANCELLED"
+      ]
+    },
+    "fills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "trade_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "client_order_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "account": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "market": {
+            "enum": [
+              "spot",
+              "perp"
+            ]
+          },
+          "symbol": {
+            "type": "string",
+            "minLength": 1
+          },
+          "side": {
+            "enum": [
+              "BUY",
+              "SELL"
+            ]
+          },
+          "quantity_exchange": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "tokens_per_exchange_quantity": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "quantity_token": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "price_usdt_per_exchange_quantity": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "fee_amount": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "fee_asset": {
+            "type": "string",
+            "minLength": 1
+          },
+          "event_time_ms": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "received_at_ms": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "trade_id",
+          "client_order_id",
+          "account",
+          "market",
+          "symbol",
+          "side",
+          "quantity_exchange",
+          "tokens_per_exchange_quantity",
+          "quantity_token",
+          "price_usdt_per_exchange_quantity",
+          "fee_amount",
+          "fee_asset",
+          "event_time_ms",
+          "received_at_ms"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "positions_after": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "instrument": {
+            "type": "object",
+            "properties": {
+              "instrument_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "token": {
+                "type": "string",
+                "minLength": 1
+              },
+              "spot_symbol": {
+                "type": "string",
+                "minLength": 1
+              },
+              "perp_symbol": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tokens_per_perp_quantity": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "spot_qty_step_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "perp_qty_step_exchange": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              }
+            },
+            "required": [
+              "instrument_id",
+              "token",
+              "spot_symbol",
+              "perp_symbol",
+              "tokens_per_perp_quantity",
+              "spot_qty_step_token",
+              "perp_qty_step_exchange"
+            ],
+            "additionalProperties": false
+          },
+          "strategy_sold_spot_qty_token": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "perp_long_qty_exchange": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "perp_long_qty_token": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "hedge_error_qty_token": {
+            "type": "string",
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "exit_locked": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "instrument",
+          "strategy_sold_spot_qty_token",
+          "perp_long_qty_exchange",
+          "perp_long_qty_token",
+          "hedge_error_qty_token",
+          "exit_locked"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "transfer_receipts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "PENDING",
+              "SETTLED",
+              "FAILED"
+            ]
+          },
+          "from_account": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "to_account": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "asset": {
+            "const": "USDT"
+          },
+          "amount": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "settled_at_ms": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          }
+        },
+        "required": [
+          "request_id",
+          "status",
+          "from_account",
+          "to_account",
+          "asset",
+          "amount",
+          "settled_at_ms"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "funding_receipts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "perp_symbol": {
+            "type": "string",
+            "minLength": 1
+          },
+          "funding_time_ms": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "received_at_ms": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "funding_rate": {
+            "type": "string",
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "position_qty_exchange": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "tokens_per_exchange_quantity": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "mark_price_usdt_per_exchange_quantity": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "amount_usdt": {
+            "type": "string",
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          }
+        },
+        "required": [
+          "event_id",
+          "perp_symbol",
+          "funding_time_ms",
+          "received_at_ms",
+          "funding_rate",
+          "position_qty_exchange",
+          "tokens_per_exchange_quantity",
+          "mark_price_usdt_per_exchange_quantity",
+          "amount_usdt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coin_return_receipts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "receipt_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "episode_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "token": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quantity_token": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "stage": {
+            "enum": [
+              "RESTORED_IN_A",
+              "RETURNED_TO_PROVIDER"
+            ]
+          },
+          "event_time_ms": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "received_at_ms": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "receipt_id",
+          "episode_id",
+          "token",
+          "quantity_token",
+          "stage",
+          "event_time_ms",
+          "received_at_ms"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "strategy_id": {
+          "const": "nfb.strategy.20261108.rc2"
+        },
+        "profile_sha256": {
+          "const": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5"
+        },
+        "engine_source_sha256": {
+          "const": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51"
+        }
+      },
+      "required": [
+        "strategy_id",
+        "profile_sha256",
+        "engine_source_sha256"
+      ]
+    }
+  },
+  "required": [
+    "protocol_version",
+    "message_type",
+    "report_id",
+    "decision_id",
+    "as_of_ms",
+    "ledger_version_before",
+    "ledger_version_after",
+    "status",
+    "fills",
+    "positions_after",
+    "transfer_receipts",
+    "reason_codes",
+    "funding_receipts",
+    "coin_return_receipts",
+    "model"
+  ],
+  "additionalProperties": false
+}

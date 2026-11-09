@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-11-09T07:43:48.696264+00:00",
+  "passed": true,
+  "tests": [
+    {
+      "suite": "runtime",
+      "count": 48,
+      "passed": true
+    },
+    {
+      "suite": "research",
+      "count": 10,
+      "passed": true
+    },
+    {
+      "suite": "frozen_rc2",
+      "count": 72,
+      "passed": true
+    }
+  ],
+  "unit_test_count": 130,
+  "new_unit_test_count": 58,
+  "independent_json_schema_checks": 15,
+  "formal_files_verified_unchanged": 155,
+  "formal_hash_mismatches": [],
+  "frozen_signal_files_verified_unchanged": 5,
+  "prior_fixed_input_files_unchanged": 5,
+  "cash_replays": 88,
+  "infeasible_cash_paths_preserved": 4,
+  "exit_stress_cases": 18,
+  "cash_identity_max_error_usdt": 4.842877388000488e-08,
+  "historical_exchange_filters_verified": false,
+  "real_execution_verified": false,
+  "executor_E01_E14_acceptance_received": false,
+  "live_models_retrained": false,
+  "orders_or_fund_transfers_sent": false,
+  "automation_restored": false
+}

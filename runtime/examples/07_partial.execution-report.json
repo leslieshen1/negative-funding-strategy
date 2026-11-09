@@ -1,0 +1,73 @@
+{
+  "protocol_version": "2.1.0",
+  "message_type": "execution_report",
+  "report_id": "report-demo-partial",
+  "decision_id": "dec-req-demo-enter",
+  "as_of_ms": 1793966401000,
+  "ledger_version_before": 10,
+  "ledger_version_after": 11,
+  "status": "PARTIAL",
+  "fills": [
+    {
+      "trade_id": "spot-trade-1",
+      "client_order_id": "spot-order-1",
+      "account": "A",
+      "market": "spot",
+      "symbol": "TESTUSDT",
+      "side": "SELL",
+      "quantity_exchange": "1000",
+      "tokens_per_exchange_quantity": "1",
+      "quantity_token": "1000",
+      "price_usdt_per_exchange_quantity": "100",
+      "fee_amount": "60",
+      "fee_asset": "USDT",
+      "event_time_ms": 1793966400500,
+      "received_at_ms": 1793966400600
+    },
+    {
+      "trade_id": "perp-trade-1",
+      "client_order_id": "perp-order-1",
+      "account": "B",
+      "market": "perp",
+      "symbol": "1000TESTUSDT",
+      "side": "BUY",
+      "quantity_exchange": "0.6",
+      "tokens_per_exchange_quantity": "1000",
+      "quantity_token": "600",
+      "price_usdt_per_exchange_quantity": "99500",
+      "fee_amount": "19.104",
+      "fee_asset": "USDT",
+      "event_time_ms": 1793966400700,
+      "received_at_ms": 1793966400800
+    }
+  ],
+  "positions_after": [
+    {
+      "instrument": {
+        "instrument_id": "TEST-1000TEST",
+        "token": "TEST",
+        "spot_symbol": "TESTUSDT",
+        "perp_symbol": "1000TESTUSDT",
+        "tokens_per_perp_quantity": "1000",
+        "spot_qty_step_token": "1",
+        "perp_qty_step_exchange": "0.001"
+      },
+      "strategy_sold_spot_qty_token": "1000",
+      "perp_long_qty_exchange": "0.6",
+      "perp_long_qty_token": "600",
+      "hedge_error_qty_token": "-400",
+      "exit_locked": false
+    }
+  ],
+  "transfer_receipts": [],
+  "reason_codes": [
+    "UNMATCHED_LEGS_RECONCILIATION_REQUIRED"
+  ],
+  "funding_receipts": [],
+  "coin_return_receipts": [],
+  "model": {
+    "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+    "engine_source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+    "strategy_id": "nfb.strategy.20261108.rc2"
+  }
+}

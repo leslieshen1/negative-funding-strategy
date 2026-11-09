@@ -1,0 +1,8 @@
+{
+  "registered_after_initial_study": true,
+  "reason": "Initial study found terminal liquidity obligations and confirmed announcement-driven delistings. These are diagnostic-driven follow-ups, not predeclared untouched tests.",
+  "candidate_combinations": ["volume_2pct_plus_OI_5pct", "volume_5pct_plus_marginal_impact_size", "volume_5pct_plus_OI_2p5pct"],
+  "robustness": ["volume_2pct_with_double_execution_cost", "volume_2pct_with_k6", "volume_5pct_OI_2p5pct_with_double_execution_cost", "volume_5pct_OI_2p5pct_with_k6", "volume_5pct_OI_2p5pct_double_cost_and_k6_combined"],
+  "timing": ["first_entry_only_T_minus_1h", "volume_2pct_plus_first_entry_T_minus_1h"],
+  "selection_guard": "No automatic production promotion. Require matched data, lifecycle handling, zero terminal obligations, account feasibility, both period results and cost stress. A later fresh live-shadow period remains necessary."
+}

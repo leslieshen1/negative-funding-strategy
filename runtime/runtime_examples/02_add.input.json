@@ -1,0 +1,333 @@
+{
+  "protocol_version": "2.1.0",
+  "message_type": "strategy_input",
+  "request_id": "runtime-fixture-02_add",
+  "as_of_ms": 1782558000000,
+  "ledger_version": 1,
+  "mode": "paper",
+  "model": {
+    "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+    "engine_source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+    "strategy_id": "nfb.strategy.20261108.rc2"
+  },
+  "portfolio": {
+    "initial_capital_usdt": "10000000",
+    "strategy_marked_pnl_usdt": "0",
+    "used_entry_capital_usdt": "19.4000",
+    "account_a_free_usdt": "1000",
+    "account_b_free_usdt": "9999000.06000",
+    "internal_transfers_allowed": true,
+    "unsettled_transfer_usdt": "0",
+    "snapshot_received_at_ms": 1782558000000,
+    "reserved_entry_capital_usdt": "0",
+    "account_b_wallet_usdt": "9999019.4000",
+    "account_b_equity_usdt": "9999019.4000",
+    "account_b_initial_margin_1x_usdt": "19.34000",
+    "account_b_transferable_usdt": "9999000.06000",
+    "risk_state": "NORMAL",
+    "account_b_position_notional_usdt": "19.34000"
+  },
+  "instruments": [
+    {
+      "instrument": {
+        "instrument_id": "BICOUSDT-BICOUSDT",
+        "token": "BICO",
+        "spot_symbol": "BICOUSDT",
+        "perp_symbol": "BICOUSDT",
+        "tokens_per_perp_quantity": "1.0",
+        "spot_qty_step_token": "0.00000001",
+        "perp_qty_step_exchange": "0.00000001",
+        "spot_min_qty_token": "0",
+        "perp_min_qty_exchange": "0",
+        "spot_min_notional_usdt": "0",
+        "perp_min_notional_usdt": "0"
+      },
+      "position": {
+        "strategy_sold_spot_qty_token": "1000",
+        "perp_long_qty_exchange": "1000",
+        "perp_long_qty_token": "1000",
+        "exit_locked": false,
+        "episode_id": "synthetic-runtime-episode",
+        "entry_cost_usdt": "19.4000",
+        "reserved_entry_cost_usdt": "0",
+        "reserved_add_qty_token": "0",
+        "episode_coin_return_due_token": "1000"
+      },
+      "market": {
+        "status": "OK",
+        "observed_at_ms": 1782558000000,
+        "previous_bar_end_ms": 1782558000000,
+        "spot_close_usdt_per_token": "0.0194",
+        "perp_close_usdt_per_token": "0.01934",
+        "settled_r8": "-0.00211819",
+        "settled_r8_source": "latest_settled",
+        "latest_settlement_time_ms": 1782547200000,
+        "latest_settlement_received_at_ms": 1782547200000,
+        "latest_raw_rate": "-0.00211819",
+        "latest_interval_hours": "8.0",
+        "raw_settled_sum_24h": "-0.00978594",
+        "settlement_history_complete": true,
+        "open_interest_usdt": "4562189.9335622",
+        "trailing_24h_paired_quote_volume_usdt": "2700216.5417788625",
+        "capacity_window_end_ms": 1782558000000,
+        "capacity_view": "causal_online",
+        "spot_quote_volume_capacity_window_usdt": "41666.3865009",
+        "perp_quote_volume_capacity_window_usdt": "357703.79833",
+        "depth_0_2pct_usdt": "19374.467924227",
+        "depth_1pct_usdt": "178841.24237748",
+        "depth_source": "volume_proxy",
+        "quotes_received_at_ms": 1782558000000,
+        "completed_inputs_received_at_ms": 1782558000000,
+        "capacity_window_start_ms": 1782554400000,
+        "capacity_window_complete": true,
+        "shared_slice_used_usdt": "0",
+        "shared_slice_reserved_usdt": "0",
+        "settlement_coverage_start_ms": 1782471600000,
+        "spot_bid_usdt_per_token": "0.01939806",
+        "spot_ask_usdt_per_token": "0.01940194",
+        "perp_bid_usdt_per_token": "0.019338066",
+        "perp_ask_usdt_per_token": "0.019341934",
+        "settlements": [
+          {
+            "funding_time_ms": 1782489600000,
+            "received_at_ms": 1782489600000,
+            "raw_rate": "-0.003584",
+            "interval_hours": "8.0"
+          },
+          {
+            "funding_time_ms": 1782518400000,
+            "received_at_ms": 1782518400000,
+            "raw_rate": "-0.00408375",
+            "interval_hours": "8.0"
+          },
+          {
+            "funding_time_ms": 1782547200000,
+            "received_at_ms": 1782547200000,
+            "raw_rate": "-0.00211819",
+            "interval_hours": "8.0"
+          }
+        ]
+      },
+      "limits": {
+        "inventory_cap_qty_token": "51546391.75257731958762886598",
+        "inventory_available_qty_token": "51546391.75257731958762886598"
+      },
+      "risk": {
+        "pause_new": false,
+        "force_exit": false,
+        "notice_received_at_ms": null,
+        "reason_codes": []
+      },
+      "model_history": [
+        {
+          "bar_end_ms": 1782468000000,
+          "received_at_ms": 1782468000000,
+          "spot_close_usdt_per_token": "0.02024",
+          "perp_close_usdt_per_token": "0.02016",
+          "oi_usdt": "4805726.20416",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782471600000,
+          "received_at_ms": 1782471600000,
+          "spot_close_usdt_per_token": "0.01933",
+          "perp_close_usdt_per_token": "0.01919",
+          "oi_usdt": "4613708.2235712",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782475200000,
+          "received_at_ms": 1782475200000,
+          "spot_close_usdt_per_token": "0.01921",
+          "perp_close_usdt_per_token": "0.01914",
+          "oi_usdt": "4717626.68645",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782478800000,
+          "received_at_ms": 1782478800000,
+          "spot_close_usdt_per_token": "0.01865",
+          "perp_close_usdt_per_token": "0.0186",
+          "oi_usdt": "4735766.32675893",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782482400000,
+          "received_at_ms": 1782482400000,
+          "spot_close_usdt_per_token": "0.01885",
+          "perp_close_usdt_per_token": "0.01877",
+          "oi_usdt": "4832186.34126",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782486000000,
+          "received_at_ms": 1782486000000,
+          "spot_close_usdt_per_token": "0.0197",
+          "perp_close_usdt_per_token": "0.01955",
+          "oi_usdt": "4881707.6869",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782489600000,
+          "received_at_ms": 1782489600000,
+          "spot_close_usdt_per_token": "0.01944",
+          "perp_close_usdt_per_token": "0.01934",
+          "oi_usdt": "4786965.4602822",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782493200000,
+          "received_at_ms": 1782493200000,
+          "spot_close_usdt_per_token": "0.01931",
+          "perp_close_usdt_per_token": "0.01921",
+          "oi_usdt": "4771130.1696",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782496800000,
+          "received_at_ms": 1782496800000,
+          "spot_close_usdt_per_token": "0.01945",
+          "perp_close_usdt_per_token": "0.01928",
+          "oi_usdt": "4804102.87813358",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782500400000,
+          "received_at_ms": 1782500400000,
+          "spot_close_usdt_per_token": "0.01916",
+          "perp_close_usdt_per_token": "0.01902",
+          "oi_usdt": "4733018.81424",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782504000000,
+          "received_at_ms": 1782504000000,
+          "spot_close_usdt_per_token": "0.01905",
+          "perp_close_usdt_per_token": "0.01894",
+          "oi_usdt": "4777363.61022895",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782507600000,
+          "received_at_ms": 1782507600000,
+          "spot_close_usdt_per_token": "0.01966",
+          "perp_close_usdt_per_token": "0.01962",
+          "oi_usdt": "4684025.55869",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782511200000,
+          "received_at_ms": 1782511200000,
+          "spot_close_usdt_per_token": "0.01982",
+          "perp_close_usdt_per_token": "0.01973",
+          "oi_usdt": "4718340.06391",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782514800000,
+          "received_at_ms": 1782514800000,
+          "spot_close_usdt_per_token": "0.02055",
+          "perp_close_usdt_per_token": "0.02035",
+          "oi_usdt": "4870390.68768",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782518400000,
+          "received_at_ms": 1782518400000,
+          "spot_close_usdt_per_token": "0.02126",
+          "perp_close_usdt_per_token": "0.02122",
+          "oi_usdt": "5089849.92436",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782522000000,
+          "received_at_ms": 1782522000000,
+          "spot_close_usdt_per_token": "0.02006",
+          "perp_close_usdt_per_token": "0.01993",
+          "oi_usdt": "4730507.32547628",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782525600000,
+          "received_at_ms": 1782525600000,
+          "spot_close_usdt_per_token": "0.01978",
+          "perp_close_usdt_per_token": "0.0197",
+          "oi_usdt": "4679650.58045034",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782529200000,
+          "received_at_ms": 1782529200000,
+          "spot_close_usdt_per_token": "0.02053",
+          "perp_close_usdt_per_token": "0.02042",
+          "oi_usdt": "4822365.35166545",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782532800000,
+          "received_at_ms": 1782532800000,
+          "spot_close_usdt_per_token": "0.02008",
+          "perp_close_usdt_per_token": "0.02",
+          "oi_usdt": "4723084.44943232",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782536400000,
+          "received_at_ms": 1782536400000,
+          "spot_close_usdt_per_token": "0.02023",
+          "perp_close_usdt_per_token": "0.02017",
+          "oi_usdt": "4795153.29317",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782540000000,
+          "received_at_ms": 1782540000000,
+          "spot_close_usdt_per_token": "0.0201",
+          "perp_close_usdt_per_token": "0.02006",
+          "oi_usdt": "4748651.72514",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782543600000,
+          "received_at_ms": 1782543600000,
+          "spot_close_usdt_per_token": "0.02027",
+          "perp_close_usdt_per_token": "0.02019",
+          "oi_usdt": "4721521.9512",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782547200000,
+          "received_at_ms": 1782547200000,
+          "spot_close_usdt_per_token": "0.01992",
+          "perp_close_usdt_per_token": "0.01985",
+          "oi_usdt": "4666559.68884",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782550800000,
+          "received_at_ms": 1782550800000,
+          "spot_close_usdt_per_token": "0.01952",
+          "perp_close_usdt_per_token": "0.01948",
+          "oi_usdt": "4570683.31210478",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782554400000,
+          "received_at_ms": 1782554400000,
+          "spot_close_usdt_per_token": "0.01959",
+          "perp_close_usdt_per_token": "0.01953",
+          "oi_usdt": "4562189.9335622",
+          "availability_source": "research_hourly_receive_proxy"
+        },
+        {
+          "bar_end_ms": 1782558000000,
+          "received_at_ms": 1782558000000,
+          "spot_close_usdt_per_token": "0.0194",
+          "perp_close_usdt_per_token": "0.01934",
+          "oi_usdt": "4541861.82830058",
+          "availability_source": "research_hourly_receive_proxy"
+        }
+      ]
+    }
+  ]
+}

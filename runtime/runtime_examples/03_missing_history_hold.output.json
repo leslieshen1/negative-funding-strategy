@@ -1,0 +1,70 @@
+{
+  "protocol_version": "2.1.0",
+  "message_type": "strategy_output",
+  "decision_id": "dec-486b8f85bc20c3807f4f4f0a537a1da5",
+  "input_request_id": "runtime-fixture-03_missing_history_hold",
+  "as_of_ms": 1782558000000,
+  "valid_until_ms": 1782558060000,
+  "ledger_version": 1,
+  "mode": "paper",
+  "model": {
+    "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+    "engine_source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+    "strategy_id": "nfb.strategy.20261108.rc2"
+  },
+  "status": "HOLD",
+  "submission_allowed": false,
+  "reason_codes": [
+    "SHADOW_DECISION_ONLY"
+  ],
+  "targets": [
+    {
+      "instrument_id": "BICOUSDT-BICOUSDT",
+      "episode_id": null,
+      "action": "HOLD",
+      "current_pair_qty_token": "0",
+      "desired_pair_qty_token": "0",
+      "target_pair_qty_token": "0",
+      "delta_pair_qty_token": "0",
+      "target_perp_qty_exchange": "0",
+      "tokens_per_perp_quantity": "1.0",
+      "exit_locked": false,
+      "max_slice_notional_usdt": "0",
+      "reason_codes": [
+        "MODEL_HISTORY_MISSING",
+        "MODEL_UNAVAILABLE_NO_NEW_EXPOSURE"
+      ],
+      "legs": [],
+      "model_diagnostics": {
+        "status": "UNAVAILABLE",
+        "model_id": "frozen-r7-online-v1",
+        "observed_at_ms": 1782558000000,
+        "expected_income_rate": null,
+        "round_trip_cost_rate": null,
+        "r7_gate_passed": false,
+        "adl_entry_blocked": false,
+        "calibration_id": "ba8ec6f5e0d59d5bd0f8a394596cb93f2c9831dc2ae0634c48b402a766370424",
+        "calibration_is_observed": false,
+        "effective_entry_r8": "-0.00211819",
+        "income_training_outcomes_end_ms": null,
+        "income_sample_count": 0,
+        "income_model_valid_from_ms": 1780272000000,
+        "income_model_valid_until_ms": 1782864000000,
+        "income_estimate_source": "unavailable",
+        "funding_bucket": 2,
+        "basis_bucket": 2,
+        "sigma_24h": null,
+        "calibration_y": null,
+        "calibration_spread_multiplier": null,
+        "calibration_data_last_available_ms": null,
+        "calibration_age_hours": null,
+        "cost_reference_slice_notional_usdt": null,
+        "model_bundle_sha256": "ba8ec6f5e0d59d5bd0f8a394596cb93f2c9831dc2ae0634c48b402a766370424",
+        "runtime_replay": true
+      },
+      "risk_state": "NORMAL",
+      "hedge_error_qty_token": "0"
+    }
+  ],
+  "transfer_requests": []
+}

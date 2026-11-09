@@ -1,0 +1,79 @@
+{
+  "protocol_version": "2.1.0",
+  "message_type": "strategy_output",
+  "decision_id": "dec-16717dde5eaba420c4f8df4f3e8178ca",
+  "input_request_id": "runtime-fixture-09_one_x_margin_repair",
+  "as_of_ms": 1782558000000,
+  "valid_until_ms": 1782558060000,
+  "ledger_version": 1,
+  "mode": "paper",
+  "model": {
+    "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+    "engine_source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+    "strategy_id": "nfb.strategy.20261108.rc2"
+  },
+  "status": "HOLD",
+  "submission_allowed": false,
+  "reason_codes": [
+    "SHADOW_DECISION_ONLY",
+    "ONE_X_MARGIN_SHORTFALL_REQUIRES_REPAIR"
+  ],
+  "targets": [
+    {
+      "instrument_id": "BICOUSDT-BICOUSDT",
+      "episode_id": "synthetic-runtime-episode",
+      "action": "HOLD",
+      "current_pair_qty_token": "1000",
+      "desired_pair_qty_token": "1000",
+      "target_pair_qty_token": "1000",
+      "delta_pair_qty_token": "0",
+      "target_perp_qty_exchange": "1000",
+      "tokens_per_perp_quantity": "1.0",
+      "exit_locked": false,
+      "max_slice_notional_usdt": "0",
+      "reason_codes": [
+        "ONE_X_MARGIN_SHORTFALL_REQUIRES_REPAIR"
+      ],
+      "legs": [],
+      "model_diagnostics": {
+        "status": "VALID",
+        "model_id": "frozen-r7-online-v1",
+        "observed_at_ms": 1782558000000,
+        "expected_income_rate": "0.044121015815736256",
+        "round_trip_cost_rate": "0.018773390144865787",
+        "r7_gate_passed": true,
+        "adl_entry_blocked": false,
+        "calibration_id": "ba8ec6f5e0d59d5bd0f8a394596cb93f2c9831dc2ae0634c48b402a766370424",
+        "calibration_is_observed": true,
+        "effective_entry_r8": "-0.002118020432311835827935111508",
+        "income_training_outcomes_end_ms": 1780257600000,
+        "income_sample_count": 3586,
+        "income_model_valid_from_ms": 1780272000000,
+        "income_model_valid_until_ms": 1782864000000,
+        "income_estimate_source": "joint",
+        "funding_bucket": 2,
+        "basis_bucket": 2,
+        "sigma_24h": "0.1185394459535066",
+        "calibration_y": "0.8909742495987149",
+        "calibration_spread_multiplier": "0.9300995720352707",
+        "calibration_data_last_available_ms": 1781222400000,
+        "calibration_age_hours": "371.0",
+        "cost_reference_slice_notional_usdt": "3375.270677223578",
+        "model_bundle_sha256": "ba8ec6f5e0d59d5bd0f8a394596cb93f2c9831dc2ae0634c48b402a766370424",
+        "runtime_replay": true
+      },
+      "risk_state": "PAUSE_NEW",
+      "hedge_error_qty_token": "0"
+    }
+  ],
+  "transfer_requests": [
+    {
+      "request_id": "tr-16717dde5eaba420-margin",
+      "from_account": "A",
+      "to_account": "B",
+      "asset": "USDT",
+      "amount": "9.34000",
+      "required_before_order_submission": true
+    }
+  ]
+}

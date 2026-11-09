@@ -1,0 +1,12 @@
+.DS_Store
+.venv/
+**/__pycache__/
+*.pyc
+*.sqlite*
+*.log
+.env
+.env.*
+!.env.example
+local-data/
+local-output/
+audit/research-scratch/

@@ -1,0 +1,86 @@
+{
+  "report_type": "executor_contract_acceptance",
+  "strategy_id": "nfb.strategy.20261108.rc2",
+  "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+  "package_sha256": null,
+  "executor_build": null,
+  "tested_at_utc": null,
+  "environment": "INTRANET_SHADOW",
+  "overall_status": "NOT_RUN",
+  "cases": [
+    {
+      "id": "E01",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E02",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E03",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E04",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E05",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E06",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E07",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E08",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E09",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E10",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E11",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E12",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E13",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "E14",
+      "status": "NOT_RUN",
+      "evidence": null
+    }
+  ],
+  "live_orders_submitted": false,
+  "notes": [],
+  "protocol_version": "2.1.0",
+  "runtime_model_bundle_sha256": "ba8ec6f5e0d59d5bd0f8a394596cb93f2c9831dc2ae0634c48b402a766370424"
+}

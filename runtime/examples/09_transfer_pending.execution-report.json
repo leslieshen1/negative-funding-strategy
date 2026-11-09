@@ -1,0 +1,33 @@
+{
+  "protocol_version": "2.1.0",
+  "message_type": "execution_report",
+  "report_id": "report-transfer-pending",
+  "decision_id": "dec-req-demo-enter",
+  "as_of_ms": 1793966401000,
+  "ledger_version_before": 10,
+  "ledger_version_after": 11,
+  "status": "ACCEPTED",
+  "fills": [],
+  "positions_after": [],
+  "transfer_receipts": [
+    {
+      "request_id": "transfer-demo-1",
+      "status": "PENDING",
+      "from_account": "B",
+      "to_account": "A",
+      "asset": "USDT",
+      "amount": "50000",
+      "settled_at_ms": null
+    }
+  ],
+  "reason_codes": [
+    "UNMATCHED_LEGS_RECONCILIATION_REQUIRED"
+  ],
+  "funding_receipts": [],
+  "coin_return_receipts": [],
+  "model": {
+    "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+    "engine_source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+    "strategy_id": "nfb.strategy.20261108.rc2"
+  }
+}

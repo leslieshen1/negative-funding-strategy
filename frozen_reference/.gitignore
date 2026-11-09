@@ -1,0 +1,44 @@
+calib_private/
+upstream/
+*.zip
+*.xlsx
+holdings*
+*inventory*
+*.key
+.env
+__pycache__/
+
+# 5B 私有中间文件
+evstat/
+*.pkl
+mkt/
+ev_stats.py
+ev2.py
+
+# v13 私有中间文件(待 Leslie 定)
+taus.pkl
+B_monthly.csv
+v13_next/out/
+
+# v15 private (independent review)
+PROFIT_internal.md
+*.bak31
+*.bak_iv
+v15_profit/out/
+*.bak*
+
+# v14 private
+v14_types/out/
+*.bak_iv14
+
+**/v15_profit/out/
+.id_seed
+id_map_*
+
+# internal-only full table
+**/PROFIT_full_internal*
+**/p_full_internal.py
+**/p_pdf_internal.py
+**/p_pdf_build.py
+**/v15_profit/pdf/
+*_tmp.html

@@ -1,0 +1,127 @@
+{
+  "protocol_version": "2.1.0",
+  "message_type": "strategy_input",
+  "request_id": "req-synthetic-19_transfer_wait",
+  "as_of_ms": 1793966400000,
+  "ledger_version": 10,
+  "mode": "shadow",
+  "model": {
+    "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+    "engine_source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+    "strategy_id": "nfb.strategy.20261108.rc2"
+  },
+  "portfolio": {
+    "initial_capital_usdt": "10000000",
+    "strategy_marked_pnl_usdt": "0",
+    "used_entry_capital_usdt": "1000000",
+    "account_a_free_usdt": "0",
+    "account_b_free_usdt": "9000000",
+    "internal_transfers_allowed": true,
+    "unsettled_transfer_usdt": "0",
+    "snapshot_received_at_ms": 1793966400000,
+    "reserved_entry_capital_usdt": "0",
+    "account_b_wallet_usdt": "10000000.00",
+    "account_b_equity_usdt": "10000000.00",
+    "account_b_initial_margin_1x_usdt": "995000",
+    "account_b_transferable_usdt": "9000000",
+    "risk_state": "NORMAL",
+    "account_b_position_notional_usdt": "995000"
+  },
+  "instruments": [
+    {
+      "instrument": {
+        "instrument_id": "TEST-1000TEST",
+        "token": "TEST",
+        "spot_symbol": "TESTUSDT",
+        "perp_symbol": "1000TESTUSDT",
+        "tokens_per_perp_quantity": "1000",
+        "spot_qty_step_token": "1",
+        "perp_qty_step_exchange": "0.001",
+        "spot_min_qty_token": "0",
+        "perp_min_qty_exchange": "0",
+        "spot_min_notional_usdt": "0",
+        "perp_min_notional_usdt": "0"
+      },
+      "position": {
+        "strategy_sold_spot_qty_token": "10000",
+        "perp_long_qty_exchange": "10",
+        "perp_long_qty_token": "10000",
+        "exit_locked": true,
+        "episode_id": "ep-synthetic-partial-exit",
+        "entry_cost_usdt": "1000000",
+        "reserved_entry_cost_usdt": "0",
+        "reserved_add_qty_token": "0",
+        "episode_coin_return_due_token": "10000"
+      },
+      "market": {
+        "status": "OK",
+        "observed_at_ms": 1793966400000,
+        "previous_bar_end_ms": 1793966400000,
+        "spot_close_usdt_per_token": "100",
+        "perp_close_usdt_per_token": "99.5",
+        "settled_r8": "-0.002",
+        "settled_r8_source": "latest_settled",
+        "latest_settlement_time_ms": 1793952000000,
+        "latest_settlement_received_at_ms": 1793952000000,
+        "latest_raw_rate": "-0.002",
+        "latest_interval_hours": "8",
+        "raw_settled_sum_24h": "0.002",
+        "settlement_history_complete": true,
+        "open_interest_usdt": "50000000",
+        "trailing_24h_paired_quote_volume_usdt": "30000000",
+        "capacity_window_end_ms": 1793966400000,
+        "capacity_view": "causal_online",
+        "shared_slice_budget_remaining_usdt": "300000",
+        "spot_quote_volume_capacity_window_usdt": "10000000",
+        "perp_quote_volume_capacity_window_usdt": "10000000",
+        "depth_0_2pct_usdt": "2000000",
+        "depth_1pct_usdt": "10000000",
+        "depth_source": "volume_proxy",
+        "quotes_received_at_ms": 1793966400000,
+        "completed_inputs_received_at_ms": 1793966400000,
+        "capacity_window_start_ms": 1793962800000,
+        "capacity_window_complete": true,
+        "shared_slice_used_usdt": "0",
+        "shared_slice_reserved_usdt": "0",
+        "settlement_coverage_start_ms": 1793880000000,
+        "spot_bid_usdt_per_token": "99.9",
+        "spot_ask_usdt_per_token": "100.1",
+        "perp_bid_usdt_per_token": "99.4",
+        "perp_ask_usdt_per_token": "99.6",
+        "settlements": [
+          {
+            "funding_time_ms": 1793894400000,
+            "received_at_ms": 1793894400000,
+            "raw_rate": "0.002",
+            "interval_hours": "8"
+          },
+          {
+            "funding_time_ms": 1793923200000,
+            "received_at_ms": 1793923200000,
+            "raw_rate": "0.002",
+            "interval_hours": "8"
+          },
+          {
+            "funding_time_ms": 1793952000000,
+            "received_at_ms": 1793952000000,
+            "raw_rate": "-0.002",
+            "interval_hours": "8"
+          }
+        ]
+      },
+      "limits": {
+        "inventory_cap_qty_token": "10000",
+        "inventory_available_qty_token": "10000",
+        "per_coin_cap_usdt": "1000000",
+        "max_position_notional_from_oi_usdt": "1250000.000",
+        "max_position_notional_from_volume_usdt": "1500000.00"
+      },
+      "risk": {
+        "pause_new": false,
+        "force_exit": false,
+        "notice_received_at_ms": null,
+        "reason_codes": []
+      }
+    }
+  ]
+}

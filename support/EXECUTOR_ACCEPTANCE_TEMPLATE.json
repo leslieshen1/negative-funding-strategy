@@ -1,0 +1,106 @@
+{
+  "schema_version": "nfb.executor-acceptance.supplement.v1",
+  "reference_package": "nfb.support.20261109.v1",
+  "strategy_id": "nfb.strategy.20261108.rc2",
+  "production_acceptance": false,
+  "cases": [
+    {
+      "case_id": "E01",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E02",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E03",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E04",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E05",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E06",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E07",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E08",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E09",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E10",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E11",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E12",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E13",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    },
+    {
+      "case_id": "E14",
+      "local_reference_checks_passed": true,
+      "executor_system_checks_passed": null,
+      "executor_version": null,
+      "log_reference": null
+    }
+  ]
+}

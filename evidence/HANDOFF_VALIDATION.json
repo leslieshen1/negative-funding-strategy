@@ -1,0 +1,21 @@
+{
+  "verified_at_utc": "2026-11-09T12:55:41.895615+00:00",
+  "offline_suites": [
+    {
+      "suite": "strategy-runtime",
+      "passed": true,
+      "log": "strategy-runtime.log",
+      "test_count": 72
+    },
+    {
+      "suite": "strategy-support",
+      "passed": true,
+      "log": "strategy-support.log",
+      "test_count": 48
+    }
+  ],
+  "frozen_historical_output_recomputed": true,
+  "production_acceptance": false,
+  "real_execution_tested": false,
+  "network_or_orders_used_in_tests": false
+}

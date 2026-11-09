@@ -1,0 +1,146 @@
+{
+  "protocol_version": "2.1.0",
+  "message_type": "execution_report",
+  "report_id": "report-synthetic-roundtrip",
+  "decision_id": "synthetic-offline-only",
+  "as_of_ms": 1000,
+  "ledger_version_before": 0,
+  "ledger_version_after": 1,
+  "status": "FILLED",
+  "fills": [
+    {
+      "trade_id": "a-open",
+      "client_order_id": "synthetic-a-open",
+      "account": "A",
+      "market": "spot",
+      "symbol": "TESTUSDT",
+      "side": "SELL",
+      "quantity_exchange": "100",
+      "tokens_per_exchange_quantity": "1",
+      "quantity_token": "100",
+      "price_usdt_per_exchange_quantity": "1",
+      "fee_amount": "0.06",
+      "fee_asset": "USDT",
+      "event_time_ms": 10,
+      "received_at_ms": 11
+    },
+    {
+      "trade_id": "b-open",
+      "client_order_id": "synthetic-b-open",
+      "account": "B",
+      "market": "perp",
+      "symbol": "1000TESTUSDT",
+      "side": "BUY",
+      "quantity_exchange": "0.1",
+      "tokens_per_exchange_quantity": "1000",
+      "quantity_token": "100.0",
+      "price_usdt_per_exchange_quantity": "1000",
+      "fee_amount": "0.032",
+      "fee_asset": "USDT",
+      "event_time_ms": 11,
+      "received_at_ms": 12
+    },
+    {
+      "trade_id": "a-close",
+      "client_order_id": "synthetic-a-close",
+      "account": "A",
+      "market": "spot",
+      "symbol": "TESTUSDT",
+      "side": "BUY",
+      "quantity_exchange": "100",
+      "tokens_per_exchange_quantity": "1",
+      "quantity_token": "100",
+      "price_usdt_per_exchange_quantity": "1.02",
+      "fee_amount": "0.0612",
+      "fee_asset": "USDT",
+      "event_time_ms": 30,
+      "received_at_ms": 31
+    },
+    {
+      "trade_id": "b-close",
+      "client_order_id": "synthetic-b-close",
+      "account": "B",
+      "market": "perp",
+      "symbol": "1000TESTUSDT",
+      "side": "SELL",
+      "quantity_exchange": "0.1",
+      "tokens_per_exchange_quantity": "1000",
+      "quantity_token": "100.0",
+      "price_usdt_per_exchange_quantity": "1020",
+      "fee_amount": "0.03264",
+      "fee_asset": "USDT",
+      "event_time_ms": 31,
+      "received_at_ms": 32
+    }
+  ],
+  "positions_after": [
+    {
+      "instrument": {
+        "instrument_id": "1000TESTUSDT",
+        "token": "TEST",
+        "spot_symbol": "TESTUSDT",
+        "perp_symbol": "1000TESTUSDT",
+        "tokens_per_perp_quantity": "1000",
+        "spot_qty_step_token": "1",
+        "perp_qty_step_exchange": "0.001"
+      },
+      "strategy_sold_spot_qty_token": "0",
+      "perp_long_qty_exchange": "0",
+      "perp_long_qty_token": "0",
+      "hedge_error_qty_token": "0",
+      "exit_locked": false
+    }
+  ],
+  "transfer_receipts": [
+    {
+      "request_id": "tr-synthetic",
+      "status": "SETTLED",
+      "from_account": "B",
+      "to_account": "A",
+      "asset": "USDT",
+      "amount": "10",
+      "settled_at_ms": 21
+    }
+  ],
+  "reason_codes": [
+    "SYNTHETIC_TEST_ONLY"
+  ],
+  "funding_receipts": [
+    {
+      "event_id": "fund-synthetic",
+      "perp_symbol": "1000TESTUSDT",
+      "funding_time_ms": 20,
+      "received_at_ms": 21,
+      "funding_rate": "-0.05",
+      "position_qty_exchange": "0.1",
+      "tokens_per_exchange_quantity": "1000",
+      "mark_price_usdt_per_exchange_quantity": "1000",
+      "amount_usdt": "5"
+    }
+  ],
+  "coin_return_receipts": [
+    {
+      "receipt_id": "restore-synthetic",
+      "episode_id": "ep-synthetic",
+      "token": "TEST",
+      "quantity_token": "100",
+      "stage": "RESTORED_IN_A",
+      "event_time_ms": 40,
+      "received_at_ms": 41
+    },
+    {
+      "receipt_id": "return-synthetic",
+      "episode_id": "ep-synthetic",
+      "token": "TEST",
+      "quantity_token": "1000",
+      "stage": "RETURNED_TO_PROVIDER",
+      "event_time_ms": 50,
+      "received_at_ms": 51
+    }
+  ],
+  "model": {
+    "strategy_id": "nfb.strategy.20261108.rc2",
+    "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+    "engine_source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51"
+  }
+}

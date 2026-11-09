@@ -1,0 +1,55 @@
+{
+  "protocol_version": "2.1.0",
+  "message_type": "strategy_output",
+  "decision_id": "dec-synthetic-13_equal_threshold_hold",
+  "input_request_id": "req-synthetic-13_equal_threshold_hold",
+  "as_of_ms": 1793966400000,
+  "valid_until_ms": 1793966460000,
+  "ledger_version": 10,
+  "mode": "shadow",
+  "model": {
+    "profile_sha256": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5",
+    "engine_source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+    "strategy_id": "nfb.strategy.20261108.rc2"
+  },
+  "status": "HOLD",
+  "submission_allowed": false,
+  "reason_codes": [
+    "SHADOW_ONLY"
+  ],
+  "targets": [
+    {
+      "instrument_id": "TEST-1000TEST",
+      "episode_id": "ep-demo",
+      "action": "HOLD",
+      "current_pair_qty_token": "0",
+      "target_pair_qty_token": "0",
+      "delta_pair_qty_token": "0",
+      "target_perp_qty_exchange": "0",
+      "tokens_per_perp_quantity": "1000",
+      "exit_locked": false,
+      "max_slice_notional_usdt": "300000",
+      "reason_codes": [
+        "RATE_NOT_STRICTLY_BELOW_THRESHOLD"
+      ],
+      "legs": [],
+      "model_diagnostics": {
+        "status": "VALID",
+        "model_id": "synthetic-r7-example",
+        "observed_at_ms": 1793966400000,
+        "expected_income_rate": "0.010",
+        "round_trip_cost_rate": "0.0035",
+        "r7_gate_passed": true,
+        "adl_entry_blocked": false,
+        "calibration_id": "synthetic-only",
+        "calibration_is_observed": false,
+        "effective_entry_r8": "-0.001",
+        "income_training_outcomes_end_ms": 1793491199999,
+        "income_sample_count": 200
+      },
+      "desired_pair_qty_token": "0",
+      "risk_state": "NORMAL"
+    }
+  ],
+  "transfer_requests": []
+}

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "aggregate_case_window_runs_checked": 124,
+  "native_baseline_and_extended_default_exact_match": true,
+  "profile_cli_cases_match_labelled_experiments": true,
+  "all_preferred_and_stress_windows_zero_terminal_obligations": true,
+  "preferred_account_identity_passed": true,
+  "preferred_one_x_margin_checks_passed": true,
+  "monthly_to_total_identity_passed": true,
+  "minute_audit_position_hash_verified": true,
+  "real_JIT_boundary_tests": 17,
+  "input_hashes_verified": 4,
+  "actual_execution_verified": false,
+  "historical_quantity_filters_verified": false,
+  "research_delivery_complete": true,
+  "production_validation_complete": false
+}

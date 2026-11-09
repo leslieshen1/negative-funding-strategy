@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "selected_historical_coin_hours": 6000,
+  "valid_scores_compared": 5970,
+  "unavailable_reasons": {
+    "ADL_HISTORY_INCOMPLETE": 12,
+    "MODEL_MARKET_INPUT_MISSING": 3,
+    "VOLATILITY_HISTORY_INCOMPLETE": 15
+  },
+  "maximum_absolute_errors": {
+    "income": 0,
+    "cost": 9.471590178833367e-16,
+    "sigma": 6.682154829462661e-15,
+    "y": 2.220446049250313e-16,
+    "spread_multiplier": 4.440892098500626e-16
+  },
+  "income_cost_gate_mismatches": 0,
+  "adl_proxy_mismatches": 0,
+  "end_to_end_decisions_with_actual_historical_market_and_synthetic_accounts": 100,
+  "signal_or_formula_equivalence_only": true,
+  "historical_execution_filter_equivalence_verified": false,
+  "actual_execution_verified": false,
+  "previously_seen_history": true,
+  "new_live_return_claim": false
+}

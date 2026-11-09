@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "new_model_month": "2026-11",
+  "future_data_removed_from": "2026-11-01T00:00:00Z",
+  "bucket_statistics_compared": 19,
+  "maximum_mean_difference": 0.0,
+  "sample_counts_identical": true,
+  "online_model_retrained": false
+}

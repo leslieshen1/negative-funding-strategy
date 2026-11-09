@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "monthly_models_exported": 14,
+  "old_update_dates_compared": 13,
+  "maximum_legacy_mean_error": 0.0,
+  "public_calibration_rows": 4613,
+  "cost_calibration_last_day": "2026-09-30",
+  "new_month": "2026-11-01 00:00:00+00:00",
+  "private_inventory_included": false,
+  "classifier_retrained": false,
+  "bundle_sha256": "ba8ec6f5e0d59d5bd0f8a394596cb93f2c9831dc2ae0634c48b402a766370424"
+}

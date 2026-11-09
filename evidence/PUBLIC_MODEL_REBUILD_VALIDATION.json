@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "private_inventory_required_to_compile_model": false,
+  "semantic_model_matches_after_removing_publication_timestamps": true,
+  "symbols_in_reference": 339,
+  "reference_cost_ceiling_usdt": "10000000",
+  "synthetic_research_inventory_qty": "0",
+  "runtime_inventory_is_actual_input": true
+}

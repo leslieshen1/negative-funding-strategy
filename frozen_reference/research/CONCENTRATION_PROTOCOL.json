@@ -1,0 +1,9 @@
+{
+  "registered_after_liquidity_followup": true,
+  "reason": "Both liquidity candidates reached 5.647M USDT single-coin mark exposure. A separate concentration limit is needed before recommending a risk-managed candidate.",
+  "risk_judgment_not_return_optimization": "10% of fixed initial capital per coin at cost and as a prior-close market-value target; 20% is a sensitivity, not a search grid.",
+  "market_value_control": "Next hourly decision after a price move; shared participation budget remains binding. Overshoots are measured rather than assumed away.",
+  "comparisons": ["cost-only cap", "10pct cost and mark target", "20pct sensitivity", "double execution cost", "k6 own funding impact", "combined double cost and k6"],
+  "holdout_status": "Exploratory, same already-seen year. No claim of a new untouched test.",
+  "production_promotion": false
+}

@@ -1,0 +1,739 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nfb:protocol:2.1.0:strategy-input.schema",
+  "title": "strategy-input",
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "const": "2.1.0"
+    },
+    "message_type": {
+      "const": "strategy_input"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ledger_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "mode": {
+      "enum": [
+        "shadow",
+        "paper",
+        "live"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "strategy_id": {
+          "const": "nfb.strategy.20261108.rc2"
+        },
+        "profile_sha256": {
+          "const": "7fd3f61359620109a3462f7afcf50f13d0cb3381aad65f7205b01dea93ecf7f5"
+        },
+        "engine_source_sha256": {
+          "const": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51"
+        }
+      },
+      "required": [
+        "strategy_id",
+        "profile_sha256",
+        "engine_source_sha256"
+      ]
+    },
+    "portfolio": {
+      "type": "object",
+      "properties": {
+        "initial_capital_usdt": {
+          "const": "10000000"
+        },
+        "strategy_marked_pnl_usdt": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "used_entry_capital_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "account_a_free_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "account_b_free_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "internal_transfers_allowed": {
+          "type": "boolean"
+        },
+        "unsettled_transfer_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "snapshot_received_at_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reserved_entry_capital_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "account_b_wallet_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "account_b_equity_usdt": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "account_b_initial_margin_1x_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "account_b_position_notional_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "account_b_transferable_usdt": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "risk_state": {
+          "enum": [
+            "NORMAL",
+            "PAUSE_NEW",
+            "EXIT_ALL",
+            "RECONCILE"
+          ]
+        }
+      },
+      "required": [
+        "initial_capital_usdt",
+        "strategy_marked_pnl_usdt",
+        "used_entry_capital_usdt",
+        "account_a_free_usdt",
+        "account_b_free_usdt",
+        "internal_transfers_allowed",
+        "unsettled_transfer_usdt",
+        "snapshot_received_at_ms",
+        "reserved_entry_capital_usdt",
+        "account_b_wallet_usdt",
+        "account_b_equity_usdt",
+        "account_b_initial_margin_1x_usdt",
+        "account_b_position_notional_usdt",
+        "account_b_transferable_usdt",
+        "risk_state"
+      ],
+      "additionalProperties": false
+    },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "instrument": {
+            "type": "object",
+            "properties": {
+              "instrument_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "token": {
+                "type": "string",
+                "minLength": 1
+              },
+              "spot_symbol": {
+                "type": "string",
+                "minLength": 1
+              },
+              "perp_symbol": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tokens_per_perp_quantity": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "spot_qty_step_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "perp_qty_step_exchange": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "spot_min_qty_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "perp_min_qty_exchange": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "spot_min_notional_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "perp_min_notional_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              }
+            },
+            "required": [
+              "instrument_id",
+              "token",
+              "spot_symbol",
+              "perp_symbol",
+              "tokens_per_perp_quantity",
+              "spot_qty_step_token",
+              "perp_qty_step_exchange",
+              "spot_min_qty_token",
+              "perp_min_qty_exchange",
+              "spot_min_notional_usdt",
+              "perp_min_notional_usdt"
+            ],
+            "additionalProperties": false
+          },
+          "position": {
+            "type": "object",
+            "properties": {
+              "strategy_sold_spot_qty_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "perp_long_qty_exchange": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "perp_long_qty_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "exit_locked": {
+                "type": "boolean"
+              },
+              "episode_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "entry_cost_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "reserved_entry_cost_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "reserved_add_qty_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "episode_coin_return_due_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              }
+            },
+            "required": [
+              "strategy_sold_spot_qty_token",
+              "perp_long_qty_exchange",
+              "perp_long_qty_token",
+              "exit_locked",
+              "episode_id",
+              "entry_cost_usdt",
+              "reserved_entry_cost_usdt",
+              "reserved_add_qty_token",
+              "episode_coin_return_due_token"
+            ],
+            "additionalProperties": false
+          },
+          "market": {
+            "type": "object",
+            "properties": {
+              "observed_at_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "previous_bar_end_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "spot_close_usdt_per_token": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "perp_close_usdt_per_token": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "settled_r8": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "settled_r8_source": {
+                "enum": [
+                  "latest_settled",
+                  "archived_reference",
+                  "unknown"
+                ]
+              },
+              "latest_settlement_time_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "latest_settlement_received_at_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "latest_raw_rate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "latest_interval_hours": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "raw_settled_sum_24h": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "settlement_history_complete": {
+                "type": "boolean"
+              },
+              "open_interest_usdt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "trailing_24h_paired_quote_volume_usdt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "capacity_window_end_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "capacity_view": {
+                "const": "causal_online"
+              },
+              "shared_slice_budget_remaining_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "spot_quote_volume_capacity_window_usdt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "perp_quote_volume_capacity_window_usdt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "depth_0_2pct_usdt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "depth_1pct_usdt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "depth_source": {
+                "enum": [
+                  "observed",
+                  "volume_proxy",
+                  "unavailable"
+                ]
+              },
+              "status": {
+                "enum": [
+                  "OK",
+                  "INCOMPLETE"
+                ]
+              },
+              "quotes_received_at_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "completed_inputs_received_at_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "spot_bid_usdt_per_token": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "spot_ask_usdt_per_token": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "perp_bid_usdt_per_token": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "perp_ask_usdt_per_token": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "capacity_window_start_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "capacity_window_complete": {
+                "type": "boolean"
+              },
+              "shared_slice_used_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "shared_slice_reserved_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "settlement_coverage_start_ms": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "settlements": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "funding_time_ms": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "received_at_ms": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "raw_rate": {
+                      "type": "string",
+                      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                    },
+                    "interval_hours": {
+                      "type": "string",
+                      "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                    }
+                  },
+                  "required": [
+                    "funding_time_ms",
+                    "received_at_ms",
+                    "raw_rate",
+                    "interval_hours"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "observed_at_ms",
+              "previous_bar_end_ms",
+              "spot_close_usdt_per_token",
+              "perp_close_usdt_per_token",
+              "settled_r8",
+              "settled_r8_source",
+              "latest_settlement_time_ms",
+              "latest_settlement_received_at_ms",
+              "latest_raw_rate",
+              "latest_interval_hours",
+              "raw_settled_sum_24h",
+              "settlement_history_complete",
+              "open_interest_usdt",
+              "trailing_24h_paired_quote_volume_usdt",
+              "capacity_window_end_ms",
+              "capacity_view",
+              "spot_quote_volume_capacity_window_usdt",
+              "perp_quote_volume_capacity_window_usdt",
+              "depth_0_2pct_usdt",
+              "depth_1pct_usdt",
+              "depth_source",
+              "status",
+              "quotes_received_at_ms",
+              "completed_inputs_received_at_ms",
+              "spot_bid_usdt_per_token",
+              "spot_ask_usdt_per_token",
+              "perp_bid_usdt_per_token",
+              "perp_ask_usdt_per_token",
+              "capacity_window_start_ms",
+              "capacity_window_complete",
+              "shared_slice_used_usdt",
+              "shared_slice_reserved_usdt",
+              "settlement_coverage_start_ms",
+              "settlements"
+            ],
+            "additionalProperties": false
+          },
+          "limits": {
+            "type": "object",
+            "properties": {
+              "inventory_cap_qty_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "inventory_available_qty_token": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "per_coin_cap_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "max_position_notional_from_oi_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "max_position_notional_from_volume_usdt": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              }
+            },
+            "required": [
+              "inventory_cap_qty_token",
+              "inventory_available_qty_token"
+            ],
+            "additionalProperties": false
+          },
+          "risk": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "pause_new": {
+                "type": "boolean"
+              },
+              "force_exit": {
+                "type": "boolean"
+              },
+              "notice_received_at_ms": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "reason_codes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "pause_new",
+              "force_exit",
+              "notice_received_at_ms",
+              "reason_codes"
+            ]
+          },
+          "model_history": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bar_end_ms": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "received_at_ms": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "spot_close_usdt_per_token": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "perp_close_usdt_per_token": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "oi_usdt": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "availability_source": {
+                  "enum": [
+                    "observed",
+                    "research_hourly_receive_proxy"
+                  ]
+                }
+              },
+              "required": [
+                "bar_end_ms",
+                "received_at_ms",
+                "spot_close_usdt_per_token",
+                "perp_close_usdt_per_token",
+                "oi_usdt",
+                "availability_source"
+              ]
+            }
+          }
+        },
+        "required": [
+          "instrument",
+          "position",
+          "market",
+          "limits",
+          "risk"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "protocol_version",
+    "message_type",
+    "request_id",
+    "as_of_ms",
+    "ledger_version",
+    "mode",
+    "model",
+    "portfolio",
+    "instruments"
+  ],
+  "additionalProperties": false
+}

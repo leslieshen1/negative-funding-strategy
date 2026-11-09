@@ -1,0 +1,60 @@
+{
+  "schema_version": "nfb.treasury-input.v1",
+  "request_id": "risk07",
+  "as_of_ms": 1794182400000,
+  "snapshot_received_at_ms": 1794182380000,
+  "ledger_version": 1,
+  "source_mode": "synthetic",
+  "account_mode": "PM",
+  "account_kind": "MASTER",
+  "subaccount_conversion_route_verified": false,
+  "account_a": {
+    "settled_usdt": "1200000",
+    "reserved_usdt": "0"
+  },
+  "account_b": {
+    "settled_usdt": "2000000",
+    "reserved_usdt": "10000",
+    "unrealized_pnl_usdt": "0",
+    "other_liabilities_usdt": "0",
+    "position_notional_usdt": "1000000",
+    "exchange_adjusted_equity_usdt": "9992000",
+    "exchange_max_withdraw_usdt": "500000",
+    "exchange_available_for_new_initial_margin_usdt": "5000000"
+  },
+  "yield_assets": [
+    {
+      "account": "B",
+      "asset": "LDUSDT",
+      "quantity": "8000000",
+      "nav_usdt_per_unit": "1",
+      "collateral_ratio": "0.999",
+      "tiers": [],
+      "status": "SETTLED",
+      "eligibility_verified": true,
+      "observed_at_ms": 1794182400000,
+      "valid_until_ms": 1794182460000
+    }
+  ],
+  "pending_redemptions": [],
+  "pending_transfers": [],
+  "instruments": [
+    {
+      "instrument_id": "1000TESTUSDT",
+      "sold_spot_qty_token": "1000000",
+      "perp_long_qty_token": "1000000",
+      "borrowed_qty_token": "1500000",
+      "provider_confirmed_return_qty_token": "0",
+      "spot_ask_usdt_per_token": "1",
+      "exit_locked": true,
+      "risk_events": [],
+      "rehypothecation_authorized": false
+    }
+  ],
+  "policy": {
+    "spot_fee_rate": "0.0006",
+    "a_buyback_stress_multiple": "1.1",
+    "b_collateral_buffer_usdt": "200000"
+  },
+  "rc2_new_exposure_budget_usdt": "1000000"
+}
