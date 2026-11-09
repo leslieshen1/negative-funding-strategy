@@ -1,0 +1,27 @@
+{
+  "origin": "synthetic_mock",
+  "policy": "frozen_RC2",
+  "source_hashes": {
+    "run_mock.py": "243a441808f6dfd8b5ba34d31fc6a890f562d808fb1daff08e4f21fe8a53ba65",
+    "policy_worker.py": "eb5a62610d94b1cd36fef9618a3ed8a29739b917528c87a85fe7ce9942d271e2",
+    "MODEL_PROFILE.json": "b2a087688dc3201d506945d3be25083c9acc77a2934d0bad2e73d4401eb725ae"
+  },
+  "seed_commitment_sha256": "8616e3daf7e9281dbd9a5c8a1e38911068c30a56bdeaafaab6046fd5e280aaf5",
+  "families": [
+    "normal",
+    "partial_fills",
+    "one_leg_delay",
+    "stale_quotes",
+    "exit_lock_rebound",
+    "borrow_recall",
+    "liquidity_collapse",
+    "cash_transfer_delay"
+  ],
+  "paths_per_family": 4,
+  "hours_per_path": 144,
+  "policy_process_receives_future": false,
+  "historical_mode": true,
+  "real_orders": false,
+  "real_forecasts": 0,
+  "return_interpretation": "synthetic execution diagnostics, not realized or forecast investment return"
+}

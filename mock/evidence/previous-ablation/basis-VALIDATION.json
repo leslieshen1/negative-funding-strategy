@@ -1,0 +1,174 @@
+{
+  "status": "passed",
+  "runs": 40,
+  "previous_16_runs_reproduced": [
+    {
+      "case": "cap100w__original",
+      "window": "IS",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w__original",
+      "window": "HO",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w__original",
+      "window": "FY",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w__original",
+      "window": "M30",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w__no_income_gate",
+      "window": "IS",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w__no_income_gate",
+      "window": "HO",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w__no_income_gate",
+      "window": "FY",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w__no_income_gate",
+      "window": "M30",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic__original",
+      "window": "IS",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic__original",
+      "window": "HO",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic__original",
+      "window": "FY",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic__original",
+      "window": "M30",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic__no_income_gate",
+      "window": "IS",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic__no_income_gate",
+      "window": "HO",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic__no_income_gate",
+      "window": "FY",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic__no_income_gate",
+      "window": "M30",
+      "errors": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    }
+  ],
+  "undeclared_engine_parameter_differences": [],
+  "all_sample_outcomes_prior_to_month": true,
+  "income_domain_rebuild_is_separate_research_only": true,
+  "active_models_and_thresholds_changed": false,
+  "inventory_and_component_and_account_identity_checks_passed": true,
+  "maximum_closed_coin_sum_error_usdt": 6.51925802230835e-08,
+  "actual_execution_verified": false,
+  "all_40_cases_simulated_terminal_liabilities_zero": true
+}

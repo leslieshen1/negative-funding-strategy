@@ -1,0 +1,7 @@
+{
+  "original_results_sha256": "e76587923277ce41d2e7fd1eb9516bc06fb8c5b9e0a65801c95586fa16027f23",
+  "same_revealed_seed": true,
+  "result_objects_equal": true,
+  "additional_assertions": "two-leg units, hourly capacity reservations, holding capacity, portfolio budget, perpetual reduce-only",
+  "parameter_or_scenario_selection": false
+}

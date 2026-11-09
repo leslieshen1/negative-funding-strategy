@@ -4,6 +4,8 @@
 
 我们负责策略、提前信号、风控、JSON 决策和真实回执分析。执行方负责下单、拆单、撤单、补腿和资金划转。信号模型独立放在 [negative-funding-signals](https://github.com/leslieshen1/negative-funding-signals)。
 
+最近检查：[2026-11-10 mock 与历史回归报告](docs/MOCK_REVIEW_20261110.md)。32条合成路径中26条完整退出、6条保留未完成义务；未获得实盘准入。
+
 ## 从这里开始
 
 | 顺序 | 内容 |
@@ -41,7 +43,8 @@ python3 -B -m unittest discover -s support/tests -v
 - `support/`：资金风控、账本、回执对账、成本分析、执行方验收模板；补充协议独立版本。
 - `docs/`：阅读顺序、责任、字段和验收边界。
 - `frozen_reference/`、`research/`：可追溯的研究源码；历史结果不作为实盘收益。
+- `mock/`：隔离策略进程、合成交易所、账本重放、历史回归入口及全部合成路径证据。
 - `evidence/`：冻结版本的校验与本次交接检查。
 - `CURRENT_RELEASE.json`、`RELEASE_MANIFEST.json`：版本入口和交付文件哈希。
 
-私有仓库不包含真实账户、真实库存明细、密钥或实盘回执。新增实盘数据经显式授权后另行交付。
+公开仓库不包含真实账户、真实库存明细、密钥或实盘回执。新增实盘数据经显式授权后另行交付。

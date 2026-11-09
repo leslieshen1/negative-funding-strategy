@@ -1,0 +1,157 @@
+{
+  "status": "passed",
+  "runs": 16,
+  "baseline_parameters_match_all_96": true,
+  "income_gate_zero_verified_unconditional": true,
+  "baseline_parity": [
+    {
+      "case": "cap100w_gate2",
+      "window": "IS",
+      "absolute_differences": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w_gate2",
+      "window": "HO",
+      "absolute_differences": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "cap100w_gate2",
+      "window": "FY",
+      "absolute_differences": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic_gate2",
+      "window": "IS",
+      "absolute_differences": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic_gate2",
+      "window": "HO",
+      "absolute_differences": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    },
+    {
+      "case": "dynamic_gate2",
+      "window": "FY",
+      "absolute_differences": {
+        "net_usdt": 0.0,
+        "funding_net_usdt": 0.0,
+        "fees_usdt": 0.0,
+        "pair_price_including_impact_usdt": 0.0
+      }
+    }
+  ],
+  "inventory_limits_passed": true,
+  "component_identity_passed": true,
+  "account_identity_passed": true,
+  "forward_model_and_thresholds_changed": false,
+  "actual_execution_verified": false,
+  "all_terminal_liabilities_zero": true,
+  "maximum_closed_episode_coin_sum_error_usdt": 6.239861249923706e-08,
+  "coin_reconciliation": [
+    {
+      "case": "cap100w_gate2",
+      "window": "IS",
+      "closed_coin_sum_minus_portfolio_net": 3.259629011154175e-08
+    },
+    {
+      "case": "cap100w_gate2",
+      "window": "HO",
+      "closed_coin_sum_minus_portfolio_net": -5.587935447692871e-09
+    },
+    {
+      "case": "cap100w_gate2",
+      "window": "FY",
+      "closed_coin_sum_minus_portfolio_net": 1.210719347000122e-08
+    },
+    {
+      "case": "cap100w_gate2",
+      "window": "M30",
+      "closed_coin_sum_minus_portfolio_net": 3.710738383233547e-10
+    },
+    {
+      "case": "cap100w_no_income_gate",
+      "window": "IS",
+      "closed_coin_sum_minus_portfolio_net": 3.3527612686157227e-08
+    },
+    {
+      "case": "cap100w_no_income_gate",
+      "window": "HO",
+      "closed_coin_sum_minus_portfolio_net": 5.9371814131736755e-09
+    },
+    {
+      "case": "cap100w_no_income_gate",
+      "window": "FY",
+      "closed_coin_sum_minus_portfolio_net": 4.6566128730773926e-09
+    },
+    {
+      "case": "cap100w_no_income_gate",
+      "window": "M30",
+      "closed_coin_sum_minus_portfolio_net": 9.076757123693824e-10
+    },
+    {
+      "case": "dynamic_gate2",
+      "window": "IS",
+      "closed_coin_sum_minus_portfolio_net": 5.494803190231323e-08
+    },
+    {
+      "case": "dynamic_gate2",
+      "window": "HO",
+      "closed_coin_sum_minus_portfolio_net": -5.820766091346741e-09
+    },
+    {
+      "case": "dynamic_gate2",
+      "window": "FY",
+      "closed_coin_sum_minus_portfolio_net": 3.166496753692627e-08
+    },
+    {
+      "case": "dynamic_gate2",
+      "window": "M30",
+      "closed_coin_sum_minus_portfolio_net": 3.710738383233547e-10
+    },
+    {
+      "case": "dynamic_no_income_gate",
+      "window": "IS",
+      "closed_coin_sum_minus_portfolio_net": 6.239861249923706e-08
+    },
+    {
+      "case": "dynamic_no_income_gate",
+      "window": "HO",
+      "closed_coin_sum_minus_portfolio_net": 4.889443516731262e-09
+    },
+    {
+      "case": "dynamic_no_income_gate",
+      "window": "FY",
+      "closed_coin_sum_minus_portfolio_net": 4.470348358154297e-08
+    },
+    {
+      "case": "dynamic_no_income_gate",
+      "window": "M30",
+      "closed_coin_sum_minus_portfolio_net": 9.076757123693824e-10
+    }
+  ]
+}

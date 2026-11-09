@@ -16,3 +16,6 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python -B scripts/verify_release.py
       - run: python -B -m unittest discover -s runtime/tests -v
+      - run: python -B -m unittest discover -s support/tests -v
+      - run: python -B mock/run_mock.py --paths-per-family 1 --seed ci-diagnostic-seed --output "$RUNNER_TEMP/nfb-mock"
+      - run: python -B mock/reconcile_receipts.py --mock-root "$RUNNER_TEMP/nfb-mock" --output "$RUNNER_TEMP/nfb-ledger"

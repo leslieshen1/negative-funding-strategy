@@ -1,5 +1,5 @@
 {
-  "package_version": "handoff-2026.11.09",
+  "package_version": "public-review-2026.11.10",
   "strategy_id": "nfb.strategy.20261108.rc2",
   "protocol_version": "2.1.0",
   "stage": "SHADOW_REFERENCE_NOT_PRODUCTION_ACCEPTED",
@@ -189,5 +189,6 @@
     "runtime_source_sha256": "53a56eafe479c394ee791f7ec2596c860fff34738cce91742530db02b3a9f5a7"
   },
   "signal_repository": "https://github.com/leslieshen1/negative-funding-signals",
-  "source_verified_at_utc": "2026-11-09T12:46:51.827441+00:00"
+  "source_verified_at_utc": "2026-11-09T12:46:51.827441+00:00",
+  "mock_validation_report": "docs/MOCK_REVIEW_20261110.md"
 }

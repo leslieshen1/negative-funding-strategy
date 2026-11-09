@@ -1,0 +1,236 @@
+{
+  "passed": true,
+  "origin": "synthetic_mock_receipts",
+  "paths": 32,
+  "checkpoint_checks": 4608,
+  "restart_checks": 96,
+  "duplicates_verified": 32,
+  "details": [
+    {
+      "path": "normal-0",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "normal-1",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "normal-2",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "normal-3",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "partial_fills-0",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "partial_fills-1",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "partial_fills-2",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "partial_fills-3",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "one_leg_delay-0",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "one_leg_delay-1",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "one_leg_delay-2",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "one_leg_delay-3",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "stale_quotes-0",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "stale_quotes-1",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "stale_quotes-2",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "stale_quotes-3",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "exit_lock_rebound-0",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "exit_lock_rebound-1",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "exit_lock_rebound-2",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "exit_lock_rebound-3",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "borrow_recall-0",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "borrow_recall-1",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "borrow_recall-2",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "borrow_recall-3",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "liquidity_collapse-0",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "liquidity_collapse-1",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "liquidity_collapse-2",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "liquidity_collapse-3",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "cash_transfer_delay-0",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "cash_transfer_delay-1",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "cash_transfer_delay-2",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    },
+    {
+      "path": "cash_transfer_delay-3",
+      "checkpoint_checks": 144,
+      "maximum_error_usdt_or_tokens": "0",
+      "restart_checks": 3,
+      "duplicate_cash_unchanged": true
+    }
+  ],
+  "actual_execution_acceptance": false,
+  "submission_allowed": false
+}
