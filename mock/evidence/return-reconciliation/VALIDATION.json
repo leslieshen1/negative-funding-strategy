@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "original_results_reproduced": 3,
+  "controlled_engine_runs": 6,
+  "reported_states": 8,
+  "original_hourly_paths_matched": true,
+  "component_bridge_closes": true,
+  "capital_and_inventory_same": true,
+  "source_code_and_model_unchanged": true,
+  "no_future_Nov17_data_fabricated": true
+}

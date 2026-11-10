@@ -1,0 +1,48 @@
+{
+  "purpose": "Explain 13.191989% vs 5.859245%; dates, initial state, finite-horizon unwind, elapsed-time denominator",
+  "capital_usdt": 10000000,
+  "annualization": "simple, 8760h; marked vs completed labels kept separate",
+  "window_early": [
+    "2026-09-28",
+    "2026-10-28"
+  ],
+  "window_late": [
+    "2026-10-09",
+    "2026-11-08"
+  ],
+  "common_data_root": "/Users/leslie/Documents/同花顺/outputs/neg-funding-last30d-20261108/data",
+  "common_data_end_exclusive": "2026-11-08",
+  "same_frozen_engine": true,
+  "same_frozen_monthly_model_bundle": true,
+  "strategy_or_model_artifacts_changed": false,
+  "old_data_is_not_new_OOS": true,
+  "real_orders": false,
+  "live_ledger_writes": false,
+  "source_hashes": {
+    "adapter": "36f8f267111647ac6f9cb94625870072bb28c0abdd0182839ba1217f170a5fa1",
+    "original_month_runner": "f1c7e7d7b2d33fd49902f49b196c2e73e97436d142b8ce180218217c00358f0e",
+    "original_result": "1c01ea08d3c14bf7abd95b1a2776b9d34b43efa05cf3b09cfcf6d3ee22424d23",
+    "later_result": "12c41e76953fb73f347ca8054c0a020c321a29981da2c7dad73fbbe141ab83ce",
+    "dataset": "8ea6ddcd7af077f2334a8f05cc517acbaff4b0efe02ced71331b9f155e383b72",
+    "private_inventory": "1b0de3cbc003cae6bb66527667246eb030c57fe4dc5d999fbec7951cf219334e",
+    "frozen_model_bundle": "4100279b918d39d81905086c98fa46564fdfbbb2d9ae6102d2eefd6ab9693dfc"
+  },
+  "cases": [
+    "late_continuous_open",
+    "late_cold_open",
+    "early_continuous_open",
+    "early_cold_open",
+    "early_cold_unwind",
+    "early_continuous_unwind"
+  ],
+  "unwind_hours": 216,
+  "unwind_starts_hours_before_entry_window_end": 24,
+  "attribution_order": [
+    "initial_state",
+    "date_window",
+    "last_24h_end_policy",
+    "subsequent_216h_tail_pnl",
+    "30_to_39_day_denominator"
+  ],
+  "late_completed_return": "Not available: 9d followup after Nov8 extends to Nov17, beyond current data and client time"
+}

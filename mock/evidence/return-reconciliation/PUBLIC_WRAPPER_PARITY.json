@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "six_frozen_runs_repeated_from_public_wrapper": true,
+  "eight_reported_states_numeric_errors_below": 1e-08,
+  "private_inventory_quantities_exported": false,
+  "public_wrapper_sha256": "76d71a43e0cd2d34805eee1f7876723f8fbc60fc351e76468e8499589ad21576",
+  "source_snapshot_sha256": "f1c7e7d7b2d33fd49902f49b196c2e73e97436d142b8ce180218217c00358f0e"
+}
