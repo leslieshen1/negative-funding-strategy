@@ -1,0 +1,83 @@
+{
+  "frozen_utc": "2026-11-10T02:54:39.763332+00:00",
+  "purpose": "Validate frozen execution cost amount129087.61 and funding-k4 deduction95445.35 without selecting for strategy PnL",
+  "window": [
+    "2026-10-09T00:00:00Z",
+    "2026-11-08T00:00:00Z"
+  ],
+  "report_hours": 720,
+  "initial_state": "identical inherited RC2 portfolio at Oct9; history before that remains legacy",
+  "capital_usdt": 10000000,
+  "training_window": [
+    "2026-09-30",
+    "2026-10-09"
+  ],
+  "candidate_model_preexisting_sha256": "56003c9b8e1f5871cb63fff531593ef7500cbf85569774e83ed7685b52211aa6",
+  "candidate_model_frozen_before_new_validation": true,
+  "known_prior_validation": "Nov2+Nov6 already inspected: perpetual improved, spot failed. Hybrid predetermined from cost errors, never returns.",
+  "fresh_validation_day": "2026-11-09",
+  "fresh_validation_hour_utc": "12",
+  "fresh_validation_never_fit": true,
+  "asset_selection": "All65 original active assets including losers, sorted; no profit ranking",
+  "quantity_grid_usdt": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2500,
+    5000,
+    10000,
+    25000,
+    50000,
+    100000
+  ],
+  "sample_decisions": "12 evenly spaced each hour at01,06,...56 minutes",
+  "quote_max_age_seconds": 2,
+  "l2_rules": "native sequence reconstruction; unknown depth cannot fill; each unsupported size and missing snapshot retained; cross-check book price within independent hourly range where available",
+  "promotion_gate": "Perpetual median must reduce fresh-validation asset-balanced within-training-support MAE by>=10% for each buy and sell; >=30 markets and>=500 supported rows. Failure retains legacy; no threshold changes after seeing validation.",
+  "primary_cost_scenarios": [
+    "legacy",
+    "validated_hybrid:spot legacy,perp pre-cutoff median only in train-support and >=4own hours over>=3days; others explicit legacy fallback"
+  ],
+  "k_grid": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    8
+  ],
+  "k_interpretation": "scenario only, bp of 8h rate per1%OI; k0 observed market funding held exogenous, not an empirical estimate; k8 twice frozen assumption, not an upper confidence bound",
+  "primary_gate": "frozen r7 entry gate; identical thresholds and income models. Cost replacement is realized execution only.",
+  "secondary_gate": "hybrid execution costs also recompute original2x cost gate, formula and threshold unchanged, report separately",
+  "stress_scenarios": [
+    "hybrid execution-price components x1.5",
+    "hybrid execution-price components x2",
+    "hybrid plus positive training p90 of5s observed-book arrival shortfall minus immediate walk; regime scenario not actual order latency"
+  ],
+  "stress_k_grid": [
+    0,
+    4,
+    8
+  ],
+  "outside_support": "legacy central fallback explicitly counted; costx2 stress retained, never fabricate missing book fills",
+  "no_optimization": [
+    "no strategy PnL in cost fitting/acceptance",
+    "no return-ranking of coins",
+    "no refit from fresh holdout",
+    "no threshold search",
+    "no v3 retraining or live-ledger changes"
+  ],
+  "data_storage": "New finite collector only; exact wire retained under512MiB total, >=18GiB free disk; old collector24GiB reserve unchanged; no paid subscription or new credentials",
+  "restrictions": "Stop whole provider on401/403/418/429/451, respect Retry-After; no alternative host/proxy. Raw failures persisted.",
+  "hashes": {
+    "original_engine": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+    "runtime_profile": "b2a087688dc3201d506945d3be25083c9acc77a2934d0bad2e73d4401eb725ae",
+    "candidate_parameters": "c35274f5361c1e158c33d46b62fbfc3844e512af5624a8e708acf0562f56930b",
+    "candidate_training": "341e1f820c10d4c9ec42d16a417ca5090383ac69dde16386ddfec38580f2308f",
+    "known_validation": "92eed21cd74126a5d74f851065d9c6211a2429b2ca90d8543e333c08bff4ce5e"
+  },
+  "not_actual_execution_acceptance": true,
+  "submission_allowed": false
+}

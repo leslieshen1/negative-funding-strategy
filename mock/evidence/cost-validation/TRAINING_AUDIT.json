@@ -1,0 +1,16 @@
+{
+  "training_files": 864,
+  "training_hour_side_regressions_recomputed": 1702,
+  "max_HY_recalculation_error": 3.552713678800501e-15,
+  "max_csv_npz_parameter_error": 7.450580596923828e-09,
+  "quality": {
+    "supported": 186510,
+    "unsupported": 11468,
+    "zero_walk": 44276
+  },
+  "cutoff_exclusive_utc": "2026-10-09T00:00:00Z",
+  "model_sha256": "56003c9b8e1f5871cb63fff531593ef7500cbf85569774e83ed7685b52211aa6",
+  "candidate_weights_changed": false,
+  "observations_retained_including_zero_walk": true,
+  "all_training_hashes_verified": true
+}

@@ -1,0 +1,22 @@
+{
+  "trace_sha256": "99fb137f9399f55058e190e1ca53f474ff5037df80fb25c5be49f6203f167934",
+  "fills": 7012,
+  "forced_exit_fills": 0,
+  "old_spread_usdt": 7471.553736546577,
+  "old_impact_usdt": 129087.6127391224,
+  "hybrid_spread_usdt": 7702.361874749388,
+  "hybrid_impact_usdt": 94666.10158798016,
+  "execution_cost_reduction_before_fee_change_usdt": 34190.703012939455,
+  "perpetual_calibrated_turnover_share": 0.8857400070921829,
+  "interpretation": "Identical original fills and held quantities; accounting isolation only, not an alternative tradable return",
+  "old_spot_impact_usdt": 65225.42042413765,
+  "old_perpetual_impact_usdt": 63862.192314984764,
+  "old_spot_spread_usdt": 5759.958144961477,
+  "old_perpetual_spread_usdt": 1711.5955915850998,
+  "hybrid_perpetual_impact_usdt": 29440.681163842506,
+  "hybrid_perpetual_spread_usdt": 1942.4037297879113,
+  "fallback_fills": {
+    "calibrated": 6917,
+    "outside_training_size_support": 95
+  }
+}

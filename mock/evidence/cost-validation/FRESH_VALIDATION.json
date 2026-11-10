@@ -1,0 +1,195 @@
+{
+  "candidate_model_unchanged": true,
+  "candidate_sha256": "56003c9b8e1f5871cb63fff531593ef7500cbf85569774e83ed7685b52211aa6",
+  "raw_files_OK": 130,
+  "raw_files_total": 130,
+  "quote_quality": {
+    "all_grid_rows": 28974,
+    "decision_quote_unavailable": 243,
+    "unsupported_visible_depth_rows": 1667
+  },
+  "metrics": [
+    {
+      "venue": "perp",
+      "side": "buy",
+      "all_rows": 8051,
+      "all_assets": 65,
+      "all_size_metrics": {
+        "legacy_asset_balanced_MAE_bps": 50.636753996863945,
+        "legacy_asset_balanced_bias_bps": 50.548635045457445,
+        "candidate_asset_balanced_MAE_bps": 11.279587879623978,
+        "candidate_asset_balanced_bias_bps": 8.462944621853438
+      },
+      "supported_training_rows": 6934,
+      "supported_assets": 65,
+      "supported_metrics": {
+        "legacy_asset_balanced_MAE_bps": 36.80113118356119,
+        "legacy_asset_balanced_bias_bps": 36.729420600917884,
+        "candidate_asset_balanced_MAE_bps": 8.558558807675979,
+        "candidate_asset_balanced_bias_bps": 7.854283901564791
+      },
+      "predefined_gate_passed": true,
+      "paired_asset_cluster_error_difference_95pct_interval_bps": [
+        -32.51233211184905,
+        -24.090278101313608
+      ],
+      "bootstrap_caveat": "one fresh calendar day; asset dependence and regime uncertainty remain; this is cost error, not return CI"
+    },
+    {
+      "venue": "perp",
+      "side": "sell",
+      "all_rows": 8199,
+      "all_assets": 65,
+      "all_size_metrics": {
+        "legacy_asset_balanced_MAE_bps": 55.575219290426595,
+        "legacy_asset_balanced_bias_bps": 55.5365209837263,
+        "candidate_asset_balanced_MAE_bps": 11.965860262724389,
+        "candidate_asset_balanced_bias_bps": 11.228824636656508
+      },
+      "supported_training_rows": 7051,
+      "supported_assets": 65,
+      "supported_metrics": {
+        "legacy_asset_balanced_MAE_bps": 39.4438043057414,
+        "legacy_asset_balanced_bias_bps": 39.40495605737806,
+        "candidate_asset_balanced_MAE_bps": 9.333008728337651,
+        "candidate_asset_balanced_bias_bps": 8.966586783847047
+      },
+      "predefined_gate_passed": true,
+      "paired_asset_cluster_error_difference_95pct_interval_bps": [
+        -34.577896606125385,
+        -25.66782177500162
+      ],
+      "bootstrap_caveat": "one fresh calendar day; asset dependence and regime uncertainty remain; this is cost error, not return CI"
+    },
+    {
+      "venue": "spot",
+      "side": "buy",
+      "all_rows": 5475,
+      "all_assets": 65,
+      "all_size_metrics": {
+        "legacy_asset_balanced_MAE_bps": 56.10366654295444,
+        "legacy_asset_balanced_bias_bps": -7.681334331992032,
+        "candidate_asset_balanced_MAE_bps": 88.04580207918613,
+        "candidate_asset_balanced_bias_bps": 62.32935439150942
+      },
+      "supported_training_rows": 3892,
+      "supported_assets": 55,
+      "supported_metrics": {
+        "legacy_asset_balanced_MAE_bps": 30.35857605322758,
+        "legacy_asset_balanced_bias_bps": 9.707252272316646,
+        "candidate_asset_balanced_MAE_bps": 48.196029843894856,
+        "candidate_asset_balanced_bias_bps": 37.421117267743625
+      },
+      "predefined_gate_passed": false,
+      "paired_asset_cluster_error_difference_95pct_interval_bps": [
+        11.120760907213707,
+        25.098432582861285
+      ],
+      "bootstrap_caveat": "one fresh calendar day; asset dependence and regime uncertainty remain; this is cost error, not return CI"
+    },
+    {
+      "venue": "spot",
+      "side": "sell",
+      "all_rows": 5582,
+      "all_assets": 65,
+      "all_size_metrics": {
+        "legacy_asset_balanced_MAE_bps": 42.720279792110034,
+        "legacy_asset_balanced_bias_bps": 14.432999843078635,
+        "candidate_asset_balanced_MAE_bps": 60.347396025449875,
+        "candidate_asset_balanced_bias_bps": 47.796559511617716
+      },
+      "supported_training_rows": 4009,
+      "supported_assets": 55,
+      "supported_metrics": {
+        "legacy_asset_balanced_MAE_bps": 22.934082450057005,
+        "legacy_asset_balanced_bias_bps": 20.845789696464788,
+        "candidate_asset_balanced_MAE_bps": 29.753315315171317,
+        "candidate_asset_balanced_bias_bps": 27.15477999124028
+      },
+      "predefined_gate_passed": false,
+      "paired_asset_cluster_error_difference_95pct_interval_bps": [
+        3.767574513126989,
+        10.096367338147994
+      ],
+      "bootstrap_caveat": "one fresh calendar day; asset dependence and regime uncertainty remain; this is cost error, not return CI"
+    }
+  ],
+  "perpetual_hybrid_allowed_by_fresh_cost_error_gate": true,
+  "spot_remains_legacy_regardless_of_new_test": "Prior cross-regime spot failure, predetermined before fresh data",
+  "delays": [
+    {
+      "venue": "perp",
+      "side": "buy",
+      "lag": "1s",
+      "rows": 8035,
+      "incremental_signed_bps_p50": 0.0,
+      "incremental_signed_bps_p90": 0.8565936000031198,
+      "actual_order_latency_measurement": false
+    },
+    {
+      "venue": "perp",
+      "side": "buy",
+      "lag": "5s",
+      "rows": 8015,
+      "incremental_signed_bps_p50": -0.20665459999902325,
+      "incremental_signed_bps_p90": 3.0059113955123173,
+      "actual_order_latency_measurement": false
+    },
+    {
+      "venue": "perp",
+      "side": "sell",
+      "lag": "1s",
+      "rows": 8179,
+      "incremental_signed_bps_p50": 0.0,
+      "incremental_signed_bps_p90": 3.2902310776190546,
+      "actual_order_latency_measurement": false
+    },
+    {
+      "venue": "perp",
+      "side": "sell",
+      "lag": "5s",
+      "rows": 8160,
+      "incremental_signed_bps_p50": 0.0,
+      "incremental_signed_bps_p90": 5.826599112285562,
+      "actual_order_latency_measurement": false
+    },
+    {
+      "venue": "spot",
+      "side": "buy",
+      "lag": "1s",
+      "rows": 5162,
+      "incremental_signed_bps_p50": 0.0,
+      "incremental_signed_bps_p90": 0.6469507820241517,
+      "actual_order_latency_measurement": false
+    },
+    {
+      "venue": "spot",
+      "side": "buy",
+      "lag": "5s",
+      "rows": 4560,
+      "incremental_signed_bps_p50": 0.0,
+      "incremental_signed_bps_p90": 3.8317607289830624,
+      "actual_order_latency_measurement": false
+    },
+    {
+      "venue": "spot",
+      "side": "sell",
+      "lag": "1s",
+      "rows": 5267,
+      "incremental_signed_bps_p50": 0.0,
+      "incremental_signed_bps_p90": 3.6942228140539615,
+      "actual_order_latency_measurement": false
+    },
+    {
+      "venue": "spot",
+      "side": "sell",
+      "lag": "5s",
+      "rows": 4647,
+      "incremental_signed_bps_p50": 0.0,
+      "incremental_signed_bps_p90": 7.160005344148072,
+      "actual_order_latency_measurement": false
+    }
+  ],
+  "no_parameters_selected_using_PnL": true,
+  "new_model_fit": false
+}
