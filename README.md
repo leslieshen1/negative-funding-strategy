@@ -12,6 +12,8 @@
 
 12.91万冲击项与k=4扣减已做数据校验和27组同口径压力回放：[成本校验与区间报告](docs/COST_VALIDATION_20261110.md)。永续候选通过新增留出检验，现货候选失败；未修改RC2或把研究情景当作实盘预期。
 
+会后实盘准备：[四项清单](docs/PRELIVE_PLAN_20261110.md)、[交易员参数复核/可发群说明](docs/TRADER_PARAMETER_REVIEW_20261110.md)、[A/B账户资料申请](docs/ACCOUNT_DATA_REQUEST_20261110.md)、[闲置币与正向费率研究](docs/POSITIVE_CARRY_RESEARCH_20261110.md)。服务器由执行方建设，当前只有对接草案，尚未部署或取得真实账户样本。
+
 ## 从这里开始
 
 | 顺序 | 内容 |

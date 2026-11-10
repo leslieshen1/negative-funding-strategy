@@ -1,0 +1,16 @@
+parameter_id,parameter,current_reference,symbol,account_mode_and_vip,order_notional_usdt,normal_value,stress_value,units,evidence_type,evidence_time_utc,private_log_reference,suggested_limit,conditions,reviewer,status
+FEES_SPOT,spot maker/taker,0.0004 / 0.0006,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+FEES_PERP,perp maker/taker,0.00012 / 0.00032,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+BORROW_COST,borrow cost,0 research assumption,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+SPREAD,spot/perp half spread,coin-specific legacy,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+WALK_COST,H Y alpha and size support,perp candidate validated; spot legacy,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+FUNDING_K,own funding impact k,4; scenarios 0/1/2/4/6/8,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+POV,prior-hour participation cap,0.03,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+OI_CAP,position/OI cap,0.025,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+VOLUME_CAP,position/trailing24h volume cap,0.05,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+ABS_CAP,absolute per-coin cap,1000000 USDT; other constraints may bind first,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+LEG_DELAY,submit/fill/hedge gap,not measured,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+TRANSFER,A/B settlement time/fee,instant/free research assumption,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+COLLATERAL,B leverage/buffer/haircuts,1x research; actual mode needed,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+RECALL,recall notice and full repayment,actual contract needed,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW
+EARN,net APR/quota/redemption,account quote needed,,,,,,,,,,,,,AWAITING_EXECUTOR_REVIEW

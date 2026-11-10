@@ -1,0 +1,31 @@
+{
+  "status": "HYPOTHETICAL_ARITHMETIC_NOT_MARKET_QUOTE_OR_BACKTEST",
+  "holding_days": 30,
+  "funding_periods_per_day": 3,
+  "capital_to_one_leg_notional_ratio": 2,
+  "roundtrip_fee_relative": ".00184",
+  "assumed_additional_roundtrip_spread_walk_relative": ".002",
+  "basis_change": 0,
+  "other_income_and_costs": 0,
+  "idle_cash_net_annual_pct_hypothesis": 2,
+  "cases": [
+    {
+      "hypothetical_rate_per_8h": "0.00005",
+      "gross_funding_annual_pct_on_notional": "5.47500",
+      "net_simple_annual_pct_on_total_cash": "0.401500",
+      "excess_over_hypothetical_2pct_idle_cash_pp": "-1.598500"
+    },
+    {
+      "hypothetical_rate_per_8h": "0.0001",
+      "gross_funding_annual_pct_on_notional": "10.9500",
+      "net_simple_annual_pct_on_total_cash": "3.13900",
+      "excess_over_hypothetical_2pct_idle_cash_pp": "1.13900"
+    },
+    {
+      "hypothetical_rate_per_8h": "0.0002",
+      "gross_funding_annual_pct_on_notional": "21.9000",
+      "net_simple_annual_pct_on_total_cash": "8.61400",
+      "excess_over_hypothetical_2pct_idle_cash_pp": "6.61400"
+    }
+  ]
+}

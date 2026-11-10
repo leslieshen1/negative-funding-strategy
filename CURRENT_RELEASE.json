@@ -1,5 +1,5 @@
 {
-  "package_version": "public-review-2026.11.10-r3",
+  "package_version": "public-review-2026.11.10-r4",
   "strategy_id": "nfb.strategy.20261108.rc2",
   "protocol_version": "2.1.0",
   "stage": "SHADOW_REFERENCE_NOT_PRODUCTION_ACCEPTED",
@@ -193,5 +193,6 @@
   "mock_validation_report": "docs/MOCK_REVIEW_20261110.md",
   "return_reconciliation_report": "docs/RETURN_RECONCILIATION_20261110.md",
   "price_decomposition_report": "docs/PRICE_DECOMPOSITION_20261110.md",
-  "cost_validation_report": "docs/COST_VALIDATION_20261110.md"
+  "cost_validation_report": "docs/COST_VALIDATION_20261110.md",
+  "prelive_preparation_report": "docs/PRELIVE_PLAN_20261110.md"
 }
