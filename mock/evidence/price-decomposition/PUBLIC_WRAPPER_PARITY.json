@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "portable_primary_case_matches_six_case_observer": true,
+  "maximum_numeric_difference": 0,
+  "portable_runner_sha256": "e4d2b69b0dd002197e7eb79b54d8159c38f24c13e3008eafdfbdae5059ef1500",
+  "observer_builder_sha256": "26cfd33fe5dcb3104b4ede3d328781e1b16c4523e190678c4e51314e8035b95d",
+  "four_item_identity_closed": true,
+  "original_dataset_and_inventory_required_by_hash": true
+}

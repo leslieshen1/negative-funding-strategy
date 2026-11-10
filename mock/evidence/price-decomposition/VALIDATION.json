@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "controlled_replays": 6,
+  "telemetry_preserves_hourly_comp_position_accounts_episodes": true,
+  "independent_trade_vector_checks": true,
+  "independent_basis_reference_identity": true,
+  "independent_funding_reconstruction": true,
+  "raw_quantities_private": true,
+  "frozen_source_unchanged": true
+}

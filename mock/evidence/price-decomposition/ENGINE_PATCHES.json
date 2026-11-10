@@ -1,0 +1,40 @@
+{
+  "purpose": "Telemetry only; baseline controls checked separately",
+  "source_sha256": "58b3aa64d6315497037de9adac4aaff1d50f382abe2cda8eccdc2a3d179d9d51",
+  "observer_sha256": "dd31d33c1bbf60da6dc61af1db3c266d0302d1aa0b5339f1af1687e1fdc6c628",
+  "frozen_source_modified": false,
+  "patches": [
+    {
+      "anchor": "first_entry_mask=None, entry_score=None):",
+      "count": 1
+    },
+    {
+      "anchor": "    TT, N = sv.shape\n",
+      "count": 1
+    },
+    {
+      "anchor": "    episode_mode = np.zeros(N)",
+      "count": 1
+    },
+    {
+      "anchor": "                    lost_f += (e2 - e) * mk_ * pos[n]; lf_ep[n] += (e2 - e) * mk_ * pos[n]; e = e2",
+      "count": 1
+    },
+    {
+      "anchor": "                fund_acc[n] += fnd; tf[li] += fnd",
+      "count": 1
+    },
+    {
+      "anchor": "            tp[li] += price; tfe[li] += fees; tc[li] += cost; cost_ep[n] += cost; ep_price[n] += price",
+      "count": 1
+    },
+    {
+      "anchor": "                    fees_acc[n] += fees; tfe[li] += fees; tc[li] += cost; cost_ep[n] += cost",
+      "count": 1
+    },
+    {
+      "anchor": "        out_cum[t - t0] = tp[0] + tp[1] + tf[0] + tf[1] - tfe[0] - tfe[1] + mtm",
+      "count": 1
+    }
+  ]
+}

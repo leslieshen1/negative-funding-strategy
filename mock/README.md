@@ -22,3 +22,5 @@ python3 -B mock/run_historical_regression.py --data /path/to/authorized/market-r
 需安装原研究依赖（见信号库锁定requirements），市场文件和库存哈希必须匹配报告；文件缺失停止。公开仓库不包含私有库存，无法只靠克隆获得相同私有场景的完整回测。
 
 13.19%与5.86%的控制回放见[专项报告](../docs/RETURN_RECONCILIATION_20261110.md)，入口`reconcile_month_returns.py`。`reference/month_replay_original.py`是按字节保留的原研究来源快照，仅由包装器在新目录内运行，勿直接当作当前数据采集器或生产入口。
+
+两腿价格归因入口为`decompose_pair_price.py`，观察器为`pair_price_observer.py`，仅支持冻结RC2配对taker模式。原始数量trace只写指定输出目录的private/；公共结果中的独立真实滑点为null，小时基差漂移代理另列。
