@@ -1,0 +1,1 @@
+These JSON files are synthetic fixtures. They are not an account, an inventory, a borrow book, or a trade. `SYN` is a placeholder name. The numbers exist so the dry-run state machine can be exercised.
