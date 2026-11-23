@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nfb.fusion-a.io.v1",
+  "title": "Fusion A dry-run messages",
+  "description": "Documentary JSON Schema. fusion_a/validate.py is the normative closed validator. Amounts are decimal strings. This package never submits orders.",
+  "$defs": {
+    "config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "strategy_id", "strategy_version", "mode", "submission_allowed", "source_mode", "synthetic", "fixture_label", "capital", "policy"],
+      "properties": {
+        "schema_version": {"const": "nfb.fusion-a.config.v1"},
+        "strategy_id": {"const": "nfb.fusion-a.research.20261123"},
+        "strategy_version": {"const": "0.1.0"},
+        "mode": {"enum": ["dry_run", "research_replay"]},
+        "submission_allowed": {"const": false},
+        "source_mode": {"enum": ["synthetic", "observed"]},
+        "synthetic": {"type": "boolean"},
+        "fixture_label": {"type": "string", "minLength": 1},
+        "capital": {"type": "object"},
+        "policy": {"type": "object"}
+      }
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "snapshot_id", "source_mode", "synthetic", "fixture_label", "event_time_ms", "received_at_ms", "valid_until_ms", "sequence", "decision_time_ms", "frozen", "opening_fact", "cash", "positions", "liabilities", "open_orders", "universe", "yield_products", "capital_flows", "execution_calibration", "risk_flags", "rc2_negative_decisions", "balances_are_facts", "targets_are_not_fills"],
+      "properties": {
+        "schema_version": {"const": "nfb.fusion-a.snapshot.v1"},
+        "snapshot_id": {"type": "string"},
+        "source_mode": {"enum": ["synthetic", "observed"]},
+        "synthetic": {"type": "boolean"},
+        "fixture_label": {"type": "string"},
+        "event_time_ms": {"type": "integer"},
+        "received_at_ms": {"type": "integer"},
+        "valid_until_ms": {"type": "integer"},
+        "sequence": {"type": "integer"},
+        "decision_time_ms": {"type": "integer"},
+        "frozen": {"type": "boolean"},
+        "opening_fact": {"type": "boolean"},
+        "cash": {"type": "array"},
+        "positions": {"type": "array"},
+        "liabilities": {"type": "array"},
+        "open_orders": {"type": "array"},
+        "universe": {"type": "array"},
+        "yield_products": {"type": "array"},
+        "capital_flows": {"type": "array"},
+        "execution_calibration": {"type": ["object", "null"]},
+        "risk_flags": {"type": "array"},
+        "rc2_negative_decisions": {"type": "array"},
+        "balances_are_facts": {"const": true},
+        "targets_are_not_fills": {"const": true}
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "receipt_id", "source_mode", "synthetic", "fixture_label", "stream_id", "sequence", "target_id", "event_time_ms", "received_at_ms", "events"],
+      "properties": {
+        "schema_version": {"const": "nfb.fusion-a.receipt.v1"},
+        "receipt_id": {"type": "string"},
+        "source_mode": {"enum": ["synthetic", "observed"]},
+        "synthetic": {"type": "boolean"},
+        "fixture_label": {"type": "string"},
+        "stream_id": {"type": "string"},
+        "sequence": {"type": "integer"},
+        "target_id": {"type": ["string", "null"]},
+        "event_time_ms": {"type": "integer"},
+        "received_at_ms": {"type": "integer"},
+        "events": {"type": "array", "minItems": 1}
+      }
+    },
+    "targetBatch": {
+      "type": "object",
+      "required": ["schema_version", "submission_allowed", "execution_actions", "targets_are_not_fills", "return_evidence", "targets", "baseline"],
+      "properties": {
+        "schema_version": {"const": "nfb.fusion-a.target-batch.v1"},
+        "submission_allowed": {"const": false},
+        "execution_actions": {"const": []},
+        "targets_are_not_fills": {"const": true},
+        "return_evidence": {"const": false},
+        "replaces_rc2": {"const": false},
+        "targets": {"type": "array"},
+        "baseline": {"type": "object"}
+      }
+    }
+  }
+}

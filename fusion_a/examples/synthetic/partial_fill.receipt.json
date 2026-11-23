@@ -1,0 +1,30 @@
+{
+  "schema_version": "nfb.fusion-a.receipt.v1",
+  "receipt_id": "synthetic-receipt-1",
+  "source_mode": "synthetic",
+  "synthetic": true,
+  "fixture_label": "SYNTHETIC_NOT_AN_ACCOUNT_OR_TRADE",
+  "stream_id": "synthetic-stream",
+  "sequence": 1,
+  "target_id": null,
+  "event_time_ms": 1700000000100,
+  "received_at_ms": 1700000000100,
+  "events": [
+    {
+      "type": "FILL",
+      "fill_id": "synthetic-fill-spot-only",
+      "order_id": null,
+      "book": "POSITIVE_CARRY",
+      "asset": "SYN",
+      "account": "B",
+      "leg": "SPOT",
+      "side": "BUY",
+      "qty_token": "1",
+      "price": "100",
+      "fee_usdt": "0",
+      "fee_known": true,
+      "fee_purpose": "IDLE",
+      "initial_margin_fraction": "1"
+    }
+  ]
+}

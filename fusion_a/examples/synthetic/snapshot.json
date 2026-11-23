@@ -1,0 +1,86 @@
+{
+  "schema_version": "nfb.fusion-a.snapshot.v1",
+  "snapshot_id": "synthetic-snapshot-1",
+  "source_mode": "synthetic",
+  "synthetic": true,
+  "fixture_label": "SYNTHETIC_NOT_AN_ACCOUNT_OR_TRADE",
+  "event_time_ms": 1699999999999,
+  "received_at_ms": 1700000000000,
+  "valid_until_ms": 1700000060000,
+  "sequence": 1,
+  "decision_time_ms": 1700000000000,
+  "frozen": false,
+  "opening_fact": true,
+  "cash": [
+    {
+      "lot_id": "B-IDLE",
+      "account": "B",
+      "purpose": "IDLE",
+      "amount": "27500000"
+    }
+  ],
+  "positions": [],
+  "liabilities": [],
+  "open_orders": [],
+  "universe": [
+    {
+      "asset": "SYN",
+      "spot_symbol": "SYNUSDT",
+      "perp_symbol": "SYNUSDT",
+      "tokens_per_perp_quantity": "1",
+      "qty_step": "0.00001",
+      "min_qty": "0.00001",
+      "min_notional_usdt": "5",
+      "spot_usdt": "100",
+      "perp_usdt": "100",
+      "index_usdt": "100",
+      "funding_rate_observed": "0.0001",
+      "funding_interval_hours": 8,
+      "funding_rate_asof_ms": 0,
+      "basis": "0",
+      "lagged_adv_quote_usdt": "1000000000000",
+      "adv_known": true,
+      "lagged_oi_quote_usdt": "1000000000000",
+      "oi_known": true,
+      "borrowable_qty_token": "0",
+      "borrow_available": false,
+      "filters_ok": true,
+      "trading_status": "TRADING",
+      "mmr": null
+    }
+  ],
+  "yield_products": [
+    {
+      "product_id": "synthetic-yield",
+      "account": "B",
+      "asset": "USDT",
+      "state": "AVAILABLE",
+      "quantity": "0",
+      "nav": "1",
+      "apr": null,
+      "apr_known": false,
+      "redeem_delay_ms": 86400000,
+      "accrued_unpaid_usdt": "0"
+    }
+  ],
+  "capital_flows": [],
+  "execution_calibration": {
+    "source_mode": "synthetic",
+    "synthetic": true,
+    "fixture_label": "SYNTHETIC_NOT_AN_ACCOUNT_OR_TRADE",
+    "fee_schedule_known": true,
+    "spot_fee_rate": "0",
+    "perp_fee_rate": "0",
+    "impact_known": true,
+    "round_trip_impact_rate": "0",
+    "completion_known": true,
+    "completion_probability": "1",
+    "queue_known": false,
+    "evidence_id": null,
+    "asof_ms": 0
+  },
+  "risk_flags": [],
+  "rc2_negative_decisions": [],
+  "balances_are_facts": true,
+  "targets_are_not_fills": true
+}
